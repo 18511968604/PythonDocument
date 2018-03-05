@@ -22,8 +22,7 @@ def download(url):
             print(linedata.get_text())
 
 
-download("http://hr.tencent.com/position_detail.php?id=32347&keywords=python&tid=0&lid=0")
-
+download("https://hr.tencent.com/position_detail.php?id=37446&keywords=&tid=0&lid=0")
 ```
 
 
