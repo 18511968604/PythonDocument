@@ -1,3 +1,6 @@
-# My Awesome Book
+### 1.Beautiful Soup 4.2.0 文档
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
+
+
+
