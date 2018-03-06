@@ -8,10 +8,10 @@ from email.mime.text import MIMEText
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 
-"""      
---1>验证码有一定规律和数量，可以利用脚本获取所有图片，并加上相应标签   
---2>将页面的文字和标签相匹配，再将图片进行相似度计算，对对应图片进行点击操作   
---3>或是训练深度学习的图片识别模型，通过算法识别   
+"""      
+--1>验证码有一定规律和数量，可以利用脚本获取所有图片，并加上相应标签   
+--2>将页面的文字和标签相匹配，再将图片进行相似度计算，对对应图片进行点击操作   
+--3>或是训练深度学习的图片识别模型，通过算法识别   
 """
 
 
@@ -21,10 +21,10 @@ def byTrain():
     browser.get("https://kyfw.12306.cn/otn/login/init")
     browser.find_element_by_id('username').clear()
     # 用户名和密码
-    browser.find_element_by_id('username').send_keys('18588403840')
-    browser.find_element_by_id('password').send_keys('qwersa1446723956')
+    browser.find_element_by_id('username').send_keys('****')
+    browser.find_element_by_id('password').send_keys('******')
     time.sleep(10)
-    browser.find_element_by_id('loginSub').click()  # 跳转到车票预定页面  
+    browser.find_element_by_id('loginSub').click()  # 跳转到车票预定页面  
     time.sleep(6)
     browser.find_element_by_link_text('车票预订').click()
     while True:
@@ -36,10 +36,10 @@ def byTrain():
         # 刷新
         browser.refresh()
         # 出发地
-        jsf = 'var a = document.getElementById("fromStation");a.value = "SZQ"'
+        jsf = 'var a = document.getElementById("fromStation");a.value = "SZQ"'
         browser.execute_script(jsf)
         # 目的地
-        jst = 'var a = document.getElementById("toStation");a.value = "CZQ"'
+        jst = 'var a = document.getElementById("toStation");a.value = "CZQ"'
         browser.execute_script(jst)
         js = "document.getElementById('train_date').removeAttribute('readonly')"
         browser.execute_script(js)
@@ -106,7 +106,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ```
 
 
