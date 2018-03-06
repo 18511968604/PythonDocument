@@ -30,7 +30,7 @@ def byTrain():
     while True:
         # 出发地点和到达地点设置
         '''
-        https://kyfw.12306.cn/otn/czxx/init中js加载
+        车站车次查询：https://kyfw.12306.cn/otn/czxx/init中js加载
         车站代码
         https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9042
         '''
