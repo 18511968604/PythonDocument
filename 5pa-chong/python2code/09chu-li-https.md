@@ -19,7 +19,6 @@ request = urllib2.Request(url, headers=header)  # 发送请求，伪装浏览器
 request.add_header("Connection", "keep-alive")  # 一直活着
 response = urllib2.urlopen(request)
 print response.read()
-
 ```
 
 
