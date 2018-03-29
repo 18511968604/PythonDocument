@@ -64,6 +64,7 @@
     * [05getzhaopin](5pa-chong/python2code/05getzhaopin.md)
     * [06ajax爬取豆瓣](5pa-chong/python2code/06ajaxpa-qu-dou-ban.md)
     * [07post爬取网易云音乐](5pa-chong/python2code/07postpa-qu-wang-yi-yun-yin-le.md)
+    * [08使用代理](5pa-chong/python2code/08shi-yong-dai-li.md)
 * [6BeautifulSoup](README.md)
   * [01智联招聘](01zhi-lian-zhao-pin.md)
   * [02股票基金](02gu-piao-ji-jin.md)
