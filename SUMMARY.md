@@ -71,4 +71,8 @@
   * [03VastCtrl](03vastctrl.md)
   * [04getEmailVastThreading](04getemailvastthreading.md)
   * [05dequeDemo](05dequedemo.md)
+  * [06getPersonnelStockList](06getstock.md)
+  * [07getStockHistory](07getstockhistory.md)
+  * [08getStockFunds](08getstockfunds.md)
+  * [spiderUtil](spiderutil.md)
 
