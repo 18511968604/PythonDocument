@@ -1,12 +1,12 @@
 # Summary
 
 * [爬虫](pa-chong.md)
-* [1.BeautifulSoup](README.md)
+* [6BeautifulSoup](README.md)
   * [01智联招聘](01zhi-lian-zhao-pin.md)
   * [02股票基金](02gu-piao-ji-jin.md)
   * [03腾讯岗位说明](03teng-xun-gang-wei.md)
   * [04腾讯岗位列表](04teng-xun-gang-wei-lie-biao.md)
-* [2.xpath](2xpath.md)
+* [7xpath](2xpath.md)
   * [01lxml](2xpath/01lxml.md)
   * [02xpath](2xpath/2xpath.md)
   * [03xpathHTML](2xpath/03xpathhtml.md)
@@ -16,7 +16,7 @@
   * [07xpathNeihan8](2xpath/07xpathneihan8.md)
   * [08xapthjb51](2xpath/08xapthjb51.md)
   * [index](2xpath/index.md)
-* 3.selenium
+* 8selenium
   * [01selenim基础](01selenimji-chu.md)
   * [02selenium模拟自动测评](02seleniummo-ni-zi-dong-ce-ping.md)
   * [03selenium模拟QQ登陆](03seleniummo-ni-qq-deng-lu.md)
@@ -75,4 +75,13 @@
   * [07getStockHistory](07getstockhistory.md)
   * [08getStockFunds](08getstockfunds.md)
   * [spiderUtil](spiderutil.md)
+* [5爬虫](5pa-chong.md)
+  * [python2Code](5pa-chong/python2code.md)
+    * [01读取网页的三种方式](5pa-chong/python2code/01du-qu-wang-ye-de-san-zhong-fang-shi.md)
+    * [02回顾正则](5pa-chong/python2code/02hui-gu-zheng-ze.md)
+    * [03大灰狼冒充大白兔](5pa-chong/python2code/03da-hui-lang-mao-chong-da-bai-tu.md)
+    * [04模拟百度搜索](5pa-chong/python2code/04mo-ni-bai-du-sou-suo.md)
+    * [05getzhaopin](5pa-chong/python2code/05getzhaopin.md)
+    * [06ajax爬取豆瓣](5pa-chong/python2code/06ajaxpa-qu-dou-ban.md)
+    * [07post爬取网易云音乐](5pa-chong/python2code/07postpa-qu-wang-yi-yun-yin-le.md)
 
