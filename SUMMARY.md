@@ -65,4 +65,10 @@
   * [06getEmail](3ren-shi-pa-chong/06getemail.md)
   * [07getEmailII](3ren-shi-pa-chong/07getemailii.md)
   * [spiderUtil](3ren-shi-pa-chong/spiderutil.md)
+* 4认识爬虫2
+  * [01getEmailDeep](01getemaildeep.md)
+  * [02getEmailVast](02getemailvast.md)
+  * [03VastCtrl](03vastctrl.md)
+  * [04getEmailVastThreading](04getemailvastthreading.md)
+  * [05dequeDemo](05dequedemo.md)
 
