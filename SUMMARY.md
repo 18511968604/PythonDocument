@@ -56,4 +56,13 @@
     * [05两条进程通过管道共享数据](2xie-cheng/02jin-cheng-tong-xin/05liang-tiao-jin-cheng-tong-guo-guan-dao-gong-xiang-shu-ju.md)
     * 06进程池
     * [07获取进程池结果](2xie-cheng/02jin-cheng-tong-xin/07huo-qu-jin-cheng-chi-jie-guo.md)
+* [3认识爬虫](3ren-shi-pa-chong.md)
+  * [01getUrls](3ren-shi-pa-chong/01geturls.md)
+  * [02getPageImage](3ren-shi-pa-chong/02getpageimage.md)
+  * [03getImageII](3ren-shi-pa-chong/03getimageii.md)
+  * [04getImageIII](3ren-shi-pa-chong/04getimageiii.md)
+  * [05getImageFromJson](3ren-shi-pa-chong/05getimagefromjson.md)
+  * [06getEmail](3ren-shi-pa-chong/06getemail.md)
+  * [07getEmailII](3ren-shi-pa-chong/07getemailii.md)
+  * [spiderUtil](3ren-shi-pa-chong/spiderutil.md)
 
