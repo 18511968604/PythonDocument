@@ -94,5 +94,6 @@
   * [03selenium模拟QQ登陆](03seleniummo-ni-qq-deng-lu.md)
   * [04selenium模拟12306购票](04seleniummo-ni-12306-gou-piao.md)
 * [9词云](9ci-yun.md)
-  * [01智联招聘词云](9ci-yun/01zhi-lian-zhao-pin-ci-yun.md)
+  * [01获取智联招聘需求](9ci-yun/01zhi-lian-zhao-pin-ci-yun.md)
+  * [02生成词云](9ci-yun/02.md)
 
