@@ -70,6 +70,7 @@
     * [11saveCookie](5pa-chong/python2code/11savecookie.md)
     * [12loadCookie](5pa-chong/python2code/12loadcookie.md)
     * [13模拟登陆人人网](5pa-chong/python2code/13mo-ni-deng-lu-ren-ren-wang.md)
+    * [14登陆dedecms](5pa-chong/python2code/14deng-lu-dedecms.md)
 * [6BeautifulSoup](README.md)
   * [01智联招聘](01zhi-lian-zhao-pin.md)
   * [02股票基金](02gu-piao-ji-jin.md)

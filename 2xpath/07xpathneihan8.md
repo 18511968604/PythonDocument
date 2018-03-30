@@ -30,7 +30,6 @@ def download(url):
 
 
 download("http://www.neihan8.com/article/list_5_10.html")
-
 ```
 
 
