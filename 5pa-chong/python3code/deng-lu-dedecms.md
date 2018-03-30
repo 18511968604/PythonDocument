@@ -2,8 +2,6 @@
 #!C:\Python36\python.exe
 # -*- coding:utf-8 -*-
 
-#!C:\Python36\python.exe
-# -*- coding:utf-8 -*-
 
 import urllib
 from urllib import request, parse
@@ -52,7 +50,6 @@ print("================================================")
 
 responseNew = urllib.request.urlopen(url=url2)
 print(responseNew.read().decode("utf-8"))
-
 ```
 
 
