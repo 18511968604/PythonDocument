@@ -97,6 +97,5 @@
   * [01获取智联招聘需求](9ci-yun/01zhi-lian-zhao-pin-ci-yun.md)
   * [02生成词云](9ci-yun/02.md)
   * [workinfo.txt](9ci-yun/workinfotxt.md)
-  * [04jiebaDemo](9ci-yun/03matplotlibdemo.md)
   * [03MatplotlibDemo](9ci-yun/03matplotlibdemo.md)
 
