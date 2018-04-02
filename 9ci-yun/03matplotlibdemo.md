@@ -1,4 +1,4 @@
-```
+```py
 #!C:\Python36\python.exe
 # -*- coding:utf-8 -*-
 import matplotlib
