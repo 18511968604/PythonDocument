@@ -98,4 +98,5 @@
   * [02生成词云](9ci-yun/02.md)
   * [workinfo.txt](9ci-yun/workinfotxt.md)
   * [03MatplotlibDemo](9ci-yun/03matplotlibdemo.md)
+  * [04数据排序](9ci-yun/04shu-ju-pai-xu.md)
 
