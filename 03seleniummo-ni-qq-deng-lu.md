@@ -5,7 +5,7 @@
 from selenium import webdriver
 import time
 
-
+# http://demo.smeoa.com/
 def openURL():
     driver = webdriver.Chrome()
     driver.get("https://user.qzone.qq.com")
@@ -25,7 +25,6 @@ def openURL():
 
 if __name__ == '__main__':
     openURL()
-
 ```
 
 

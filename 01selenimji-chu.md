@@ -148,7 +148,6 @@ if __name__ == '__main__':
     getElement()
     getImage()
     pass
-
 ```
 
 
