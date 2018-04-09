@@ -1,4 +1,4 @@
-### 1、Tesseract
+1、Tesseract
 
 一款由HP实验室开发由Google维护的开源OCR\(光学字符识别\)引擎
 
@@ -83,11 +83,9 @@ tesseract test.jpg result -l chi_sim
 
   生成.tr文件
 
-```
-tesseract  mjorcen.normal.exp0.jpg mjorcen.normal.exp0  nobatch box.train
-```
+  tesseract  mjorcen.normal.exp0.jpg mjorcen.normal.exp0  nobatch box.train
 
-  生成unicharset文件
+ 生成unicharset文件
 
 * 将生成的traineddata放入tessdata中
 
