@@ -91,6 +91,14 @@ tesseract test.jpg result -l chi_sim
 
 ![](/assets/trainTR.png)
 
+```
+shapeclustering -F font_properties -U unicharset mjorcen.normal.exp0.
+
+trmftraining -F font_properties -U unicharset -O unicharset mjorcen.normal.exp0.tr
+
+cntraining mjorcen.normal.exp0.tr
+```
+
 * 将生成的traineddata放入tessdata中
 
 
