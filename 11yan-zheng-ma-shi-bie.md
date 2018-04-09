@@ -65,14 +65,6 @@ tesseract test.jpg result -l chi_sim
 
   ![](/assets/trainBox.png)
 
-* 定义字符配置文件
-
-  **新建一个font\_properties文件**
-
-  里面内容写入
-
-  normal 0 0 0 0 0 表示默认普通字体
-
 * 字符矫正
 
   打开.tif文件，逐个矫正
@@ -91,10 +83,18 @@ tesseract test.jpg result -l chi_sim
 
 ![](/assets/trainTR.png)
 
-```
-shapeclustering -F font_properties -U unicharset mjorcen.normal.exp0.
+* 定义字符配置文件
 
-trmftraining -F font_properties -U unicharset -O unicharset mjorcen.normal.exp0.tr
+ 新建一个font\_properties文件
+
+ 里面内容写入
+
+ normal 0 0 0 0 0 表示默认普通字体
+
+```
+shapeclustering -F font_properties -U unicharset mjorcen.normal.exp0.tr
+
+mftraining -F font_properties -U unicharset -O unicharset mjorcen.normal.exp0.tr
 
 cntraining mjorcen.normal.exp0.tr
 ```
