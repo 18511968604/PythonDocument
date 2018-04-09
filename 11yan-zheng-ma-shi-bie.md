@@ -44,14 +44,19 @@ tesseract test.jpg result -l chi_sim
 
   1、将图片转换成tif格式，用于后面生成box文件。可以通过画图，然后另存为tif即可。
 
- 更改图片名字，这个是有要求的=。=
+  更改图片名字，这个是有要求的=。=
 
   tif文面命名格式\[lang\].\[fontname\].exp\[num\].tif  
- lang是语言 fontname是字体   
- 比如我们要训练自定义字库 mjorcen字体名normal  
- 那么我们把图片文件重命名 mjorcen.normal.exp0.jpg在转tif。
+  lang是语言 fontname是字体  
+  比如我们要训练自定义字库 mjorcen字体名normal  
+  那么我们把图片文件重命名 mjorcen.normal.exp0.jpg在转tif。
+
+  2、使用jTessBoxEditor
+
+    点击train.bat----&gt;tool-----&gt;Merga TIFF-----&gt;选择图片-----&gt;保存为---名字.语言.exp0
 
 * Merge样本文件
+
 * 生成BOX文件
 * 定义字符配置文件
 * 字符矫正
