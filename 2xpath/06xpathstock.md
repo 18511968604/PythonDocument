@@ -20,7 +20,6 @@ def download(url):
 
 
 download("http://quote.stockstar.com/fund/stock_3_1_2.html")
-
 ```
 
 

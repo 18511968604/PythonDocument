@@ -86,9 +86,6 @@ if __name__ == '__main__':
     for i in myList:
         # print getJob(i)
         threading.Thread(target=getJob, args=(i,)).start()
-
-
-
 ```
 
 
