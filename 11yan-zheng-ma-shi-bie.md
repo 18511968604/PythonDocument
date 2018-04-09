@@ -18,5 +18,11 @@ lang是语言名称（在Tesseract-OCR中tessdata文件夹可看到以eng开头�
 例：tesseract test.png output_1 –l eng
 ```
 
+#### 字库
 
+https://github.com/tesseract-ocr/tessdata/find/master
+
+    下载chi\_sim.traindata字库。要有这个才能识别中文。下好后，放到Tesseract-OCR项目的tessdata文件夹里面。
+
+    tesseract test.jpg result -l chi\_sim
 
