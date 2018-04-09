@@ -38,7 +38,7 @@ tesseract test.jpg result -l chi_sim
 
 参考
 
-[http://blog.sina.com.cn/s/blog\_660e521d0102uyaq.html](http://blog.sina.com.cn/s/blog_660e521d0102uyaq.html)
+[http://blog.sina.com.cn/s/blog\_660e521d0102uyaq.html](http://www.cnblogs.com/mjorcen/p/3800739.html)
 
 * 获取样本文件
 
