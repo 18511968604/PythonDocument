@@ -101,11 +101,21 @@ cntraining mjorcen.normal.exp0.tr
 
 ![](/assets/train.png)
 
-* **把目录下的unicharset、inttemp、pffmtable、shapetable、normproto这五个文件前面都加上normal.**
+* 把目录下的unicharset、inttemp、pffmtable、shapetable、normproto这五个文件前面都加上normal.
 
+![](/assets/trainnormal1.png)
 
+* 执行combine\_tessdata normal.
 
-* 将生成的traineddata放入tessdata中
+![](/assets/trainlange.png)
+
+* 将生成的.traineddata文件放入D:\Tesseract-OCR\tessdata中
+
+* 测试
+
+```
+tesseract mjorcen.normal.exp0.jpg mjorcen.normal.exp0 -l normal
+```
 
 
 
