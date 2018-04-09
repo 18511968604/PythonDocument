@@ -23,8 +23,6 @@ response = opener.open(request)  # 载入cookie，登陆
 response_index = opener.open("http://www.renren.com/4354719823/profile")
 
 print response_index.read()
-
-
 ```
 
 
