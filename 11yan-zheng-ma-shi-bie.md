@@ -87,7 +87,9 @@ tesseract test.jpg result -l chi_sim
 
   生成unicharset文件
 
-   unicharset\_extractor mjorcen.normal.exp0.box
+  unicharset\_extractor mjorcen.normal.exp0.box
+
+![](/assets/trainTR.png)
 
 * 将生成的traineddata放入tessdata中
 
