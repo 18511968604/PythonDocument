@@ -75,11 +75,18 @@ tesseract test.jpg result -l chi_sim
 
 * 字符矫正
 
-   打开.tif文件，逐个矫正
+  打开.tif文件，逐个矫正
 
 ![](/assets/trainchange.png)
 
 * 执行批处理文件
+
+  生成.tr文件
+
+```
+tesseract  mjorcen.normal.exp0.jpg mjorcen.normal.exp0  nobatch box.train
+```
+
 * 将生成的traineddata放入tessdata中
 
 
