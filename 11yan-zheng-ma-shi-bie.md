@@ -53,11 +53,14 @@ tesseract test.jpg result -l chi_sim
 
   2、使用jTessBoxEditor
 
-    点击train.bat----&gt;tool-----&gt;Merga TIFF-----&gt;选择图片-----&gt;保存为---名字.语言.exp0
+  点击train.bat----&gt;tool-----&gt;Merga TIFF-----&gt;选择图片-----&gt;保存为---名字.语言.exp0
 
 * Merge样本文件
 
 * 生成BOX文件
+
+ tesseract mjorcen.normal.exp0.jpg mjorcen.normal.exp0 -l chi\_sim batch.nochop makebox
+
 * 定义字符配置文件
 * 字符矫正
 * 执行批处理文件
