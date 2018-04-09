@@ -85,7 +85,9 @@ tesseract test.jpg result -l chi_sim
 
   tesseract  mjorcen.normal.exp0.jpg mjorcen.normal.exp0  nobatch box.train
 
- 生成unicharset文件
+  生成unicharset文件
+
+   unicharset\_extractor mjorcen.normal.exp0.box
 
 * 将生成的traineddata放入tessdata中
 
