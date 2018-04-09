@@ -103,5 +103,6 @@
   * [01多协程爬取招聘网](01duo-xie-cheng-pa-qu-zhao-pin-wang.md)
   * [02多线程爬取招聘网](02duo-xian-cheng-pa-qu-zhao-pin-wang.md)
   * [03多进程爬取协程网](03duo-jin-cheng-pa-qu-xie-cheng-wang.md)
-* [11验证码识别](11yan-zheng-ma-shi-bie.md)
+* [11图片识别](11yan-zheng-ma-shi-bie.md)
+  * [01验证码识别](11yan-zheng-ma-shi-bie/01shi-yong-yan-zheng-ma.md)
 
