@@ -55,7 +55,7 @@ tesseract test.jpg result -l chi_sim
 
   点击train.bat----&gt;tool-----&gt;Merga TIFF-----&gt;选择图片-----&gt;保存为---名字.语言.exp0，在修改另存为.jpg
 
- ![](/assets/traintif.png)
+  ![](/assets/traintif.png)
 
 * Merge样本文件
 
@@ -63,13 +63,20 @@ tesseract test.jpg result -l chi_sim
 
   tesseract mjorcen.normal.exp0.jpg mjorcen.normal.exp0 -l eng batch.nochop makebox
 
-     ![](/assets/trainBox.png)
-
- 
+  ![](/assets/trainBox.png)
 
 * 定义字符配置文件
 
+ **新建一个font\_properties文件**
+
+ 里面内容写入 
+
+ normal 0 0 0 0 0 表示默认普通字体
+
 * 字符矫正
+
+ 
+
 * 执行批处理文件
 * 将生成的traineddata放入tessdata中
 
