@@ -101,6 +101,10 @@ cntraining mjorcen.normal.exp0.tr
 
 ![](/assets/train.png)
 
+* **把目录下的unicharset、inttemp、pffmtable、shapetable、normproto这五个文件前面都加上normal.**
+
+
+
 * 将生成的traineddata放入tessdata中
 
 
