@@ -67,15 +67,17 @@ tesseract test.jpg result -l chi_sim
 
 * 定义字符配置文件
 
- **新建一个font\_properties文件**
+  **新建一个font\_properties文件**
 
- 里面内容写入 
+  里面内容写入
 
- normal 0 0 0 0 0 表示默认普通字体
+  normal 0 0 0 0 0 表示默认普通字体
 
 * 字符矫正
 
- 
+   打开.tif文件，逐个矫正
+
+![](/assets/trainchange.png)
 
 * 执行批处理文件
 * 将生成的traineddata放入tessdata中
