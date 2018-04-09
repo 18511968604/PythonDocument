@@ -28,5 +28,17 @@ lang是语言名称（在Tesseract-OCR中tessdata文件夹可看到以eng开头�
 tesseract test.jpg result -l chi_sim
 ```
 
+#### 但是还是有点不够准确，那么我们有没有什么办法能提高tesseract识别字符准确率呢？
+
+#### 接下来，我们将使用配套训练工具jTessBoxEditor来训练样本，来提高我们的准确率！
+
+大体流程为：安装jTessBoxEditor -&gt; 获取样本文件 -&gt; Merge样本文件 –&gt; 生成BOX文件 -&gt; 定义字符配置文件 -&gt; 字符矫正 -&gt; 执行批处理文件 -&gt; 将生成的traineddata放入tessdata中
+
+https://sourceforge.net/projects/vietocr/files/jTessBoxEditor/
+
+参考
+
+http://blog.sina.com.cn/s/blog\_660e521d0102uyaq.html
+
 
 
