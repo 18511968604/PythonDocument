@@ -62,6 +62,26 @@ DOWNLOADER_MIDDLEWARES = {
     'baidubaike.middlewares.RandomUserAgent': 100,  #配置好代理
     'baidubaike.middlewares.RandomProxy': 200,
 }
+
+
+USER_AGENTS = [
+    'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2)',
+    'Opera/9.27 (Windows NT 5.2; U; zh-cn)',
+    'Opera/8.0 (Macintosh; PPC Mac OS X; U; en)',
+    'Mozilla/5.0 (Macintosh; PPC Mac OS X; U; en) Opera 8.0',
+    'Mozilla/5.0 (Linux; U; Android 4.0.3; zh-cn; M032 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+    'Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13'
+]
+
+
+# 开代理服务器CCpory
+PROXIES = [
+    { "ip_port":"10.36.132.187:808","user_passwd" :None}
+        #{"ip_prot" :"121.42.140.113:16816", "user_passwd" : ""}
+        #{"ip_prot" :"121.42.140.113:16816", "user_passwd" : ""}
+        #{"ip_prot" :"121.42.140.113:16816", "user_passwd" : ""}
+]
 ```
 
 
