@@ -115,6 +115,8 @@
     * [04自然语言处理](11yan-zheng-ma-shi-bie/baiduaitest/04zi-ran-yu-yan-chu-li.md)
     * [05图像识别](11yan-zheng-ma-shi-bie/baiduaitest/05tu-xiang-shi-bie.md)
 * 12认识scrapy
+  * [1配置安装](1pei-zhi-an-zhuang.md)
+  * [2入门案例](2ru-men-an-li.md)
 * [13scrapy](12ren-shi-scrapy.md)
   * [01tianyaScrapy](12ren-shi-scrapy/01tianyascrapy.md)
     * [mytianya](12ren-shi-scrapy/01tianyascrapy/mytianya.md)
