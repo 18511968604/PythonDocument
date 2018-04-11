@@ -43,7 +43,6 @@ class BaikeSpider(CrawlSpider):
         baikeitem["content"] =str(self.getcontent(pagedata))
         baikeitem["url"] =response.url
         yield  baikeitem
-
 ```
 
 items.py
@@ -54,6 +53,15 @@ class BaidubaikeItem(scrapy.Item):
     name = scrapy.Field()
     content=scrapy.Field()
     url=scrapy.Field()
+```
+
+setting.py
+
+```py
+DOWNLOADER_MIDDLEWARES = {
+    'baidubaike.middlewares.RandomUserAgent': 100,  #配置好代理
+    'baidubaike.middlewares.RandomProxy': 200,
+}
 ```
 
 
