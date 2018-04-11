@@ -105,4 +105,13 @@
   * [03多进程爬取协程网](03duo-jin-cheng-pa-qu-xie-cheng-wang.md)
 * [11图片识别](11yan-zheng-ma-shi-bie.md)
   * [01验证码识别](11yan-zheng-ma-shi-bie/01shi-yong-yan-zheng-ma.md)
+  * [TesseractTest](11yan-zheng-ma-shi-bie/tesseracttest.md)
+    * [01识别英文](11yan-zheng-ma-shi-bie/tesseracttest/01shi-bie-ying-wen.md)
+    * [02识别中文](11yan-zheng-ma-shi-bie/tesseracttest/02shi-bie-zhong-wen.md)
+  * [BaiduAITest](11yan-zheng-ma-shi-bie/baiduaitest.md)
+    * [01识别英文](11yan-zheng-ma-shi-bie/baiduaitest/01shi-bie-zhong-wen.md)
+    * [02识别中文](11yan-zheng-ma-shi-bie/baiduaitest/02shi-bie-ying-wen.md)
+    * [03人脸识别](11yan-zheng-ma-shi-bie/baiduaitest/03ren-lian-shi-bie.md)
+    * [04自然语言处理](11yan-zheng-ma-shi-bie/baiduaitest/04zi-ran-yu-yan-chu-li.md)
+    * [05图像识别](11yan-zheng-ma-shi-bie/baiduaitest/05tu-xiang-shi-bie.md)
 
