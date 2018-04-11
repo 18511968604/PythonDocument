@@ -117,4 +117,6 @@
 * [12认识scrapy](12ren-shi-scrapy.md)
   * [01tianyaScrapy](12ren-shi-scrapy/01tianyascrapy.md)
     * [mytianya](12ren-shi-scrapy/01tianyascrapy/mytianya.md)
+    * [items](12ren-shi-scrapy/01tianyascrapy/items.md)
+    * [pipelines](12ren-shi-scrapy/01tianyascrapy/pipelines.md)
 
