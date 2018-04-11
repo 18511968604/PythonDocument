@@ -93,7 +93,6 @@ class CrawlSpider(Spider):
     def set_crawler(self, crawler):
         super(CrawlSpider, self).set_crawler(crawler)
         self._follow_links = crawler.settings.getbool('CRAWLSPIDER_FOLLOW_LINKS', True)
-
 ```
 
 CrawlSpider继承于Spider类，除了继承过来的属性外（name、allow\_domains），还提供了新的属性和方法:
@@ -102,7 +101,6 @@ CrawlSpider继承于Spider类，除了继承过来的属性外（name、allow\_d
 
 ```
 class scrapy.linkextractors.LinkExtractor
-
 ```
 
 Link Extractors 的目的很简单: 提取链接｡
@@ -125,7 +123,6 @@ class scrapy.linkextractors.LinkExtractor(
     unique = True,
     process_value = None
 )
-
 ```
 
 主要参数：
@@ -145,7 +142,6 @@ class scrapy.linkextractors.LinkExtractor(
 在rules中包含一个或多个Rule对象，每个Rule对爬取网站的动作定义了特定操作。如果多个rule匹配了相同的链接，则根据规则在本集合中被定义的顺序，第一个会被使用。
 
 ```py
-
 class scrapy.spiders.Rule(
         link_extractor, 
         callback = None, 
@@ -154,7 +150,6 @@ class scrapy.spiders.Rule(
         process_links = None, 
         process_request = None
 )
-
 ```
 
 * `link_extractor`：是一个Link Extractor对象，用于定义需要提取的链接。
@@ -185,7 +180,6 @@ class scrapy.spiders.Rule(
    from scrapy.linkextractors import LinkExtractor
 
    page_lx = LinkExtractor(allow=('position.php?&start=\d+'))
-
    ```
 
    > allow : LinkExtractor对象最重要的参数之一，这是一个正则表达式，必须要匹配这个正则表达式\(或正则表达式列表\)的URL才会被提取，如果没有给出\(或为空\), 它会匹配所有的链接｡
@@ -196,14 +190,12 @@ class scrapy.spiders.Rule(
 
    ```
     page_lx.extract_links(response)
-
    ```
 
 4. 没有查到：
 
    ```
     []
-
    ```
 
 5. 注意转义字符的问题，继续重新匹配：
@@ -213,7 +205,6 @@ class scrapy.spiders.Rule(
     # page_lx = LinkExtractor(allow = ('start=\d+'))
 
     page_lx.extract_links(response)
-
    ```
 
 ![](../images/tencent_rule.png)
@@ -237,50 +228,46 @@ rules = [
 **不对！千万记住 callback 千万不能写 parse，再次强调：由于CrawlSpider使用parse方法来实现其逻辑，如果覆盖了 parse方法，crawl spider将会运行失败。**
 
 ```py
-#tencent.py
+# -*- coding: utf-8 -*-
+import re
 
 import scrapy
-from scrapy.spiders import CrawlSpider, Rule
-from scrapy.linkextractors import LinkExtractor
-from mySpider.items import TencentItem
 
-class TencentSpider(CrawlSpider):
-    name = "tencent"
-    allowed_domains = ["hr.tencent.com"]
-    start_urls = [
-        "http://hr.tencent.com/position.php?&start=0#a"
-    ]
+from  scrapy.spiders import CrawlSpider, Rule  # 提取超链接的规则
+from  scrapy.linkextractors import LinkExtractor  # 提取超链接
+
+from Tencent import items
+
+
+class MytencentSpider(CrawlSpider):
+    name = 'myTencent'
+    allowed_domains = ['hr.tencent.com']
+    start_urls = ['https://hr.tencent.com/position.php?lid=2218&start=0#a']
 
     page_lx = LinkExtractor(allow=("start=\d+"))
 
     rules = [
-        Rule(page_lx, callback = "parseContent", follow = True)
+        Rule(page_lx, callback="parseContent", follow=True)
     ]
-
+    
+    # parse(self, response)
     def parseContent(self, response):
-        for each in response.xpath('//*[@class="even"]'):
-            name = each.xpath('./td[1]/a/text()').extract()[0]
-            detailLink = each.xpath('./td[1]/a/@href').extract()[0]
-            positionInfo = each.xpath('./td[2]/text()').extract()[0]
+        for data in response.xpath("//tr[@class=\"even\"] | //tr[@class=\"odd\"]"):
+            item = items.TencentItem()
+            item["jobTitle"] = data.xpath("./td[1]/a/text()")[0].extract()
+            item["jobLink"] = "https://hr.tencent.com/" + data.xpath("./td[1]/a/@href")[0].extract()
+            item["jobCategories"] = data.xpath("./td[1]/a/text()")[0].extract()
+            item["number"] = data.xpath("./td[2]/text()")[0].extract()
+            item["location"] = data.xpath("./td[3]/text()")[0].extract()
+            item["releasetime"] = data.xpath("./td[4]/text()")[0].extract()
 
-            peopleNumber = each.xpath('./td[3]/text()').extract()[0]
-            workLocation = each.xpath('./td[4]/text()').extract()[0]
-            publishTime = each.xpath('./td[5]/text()').extract()[0]
-            #print name, detailLink, catalog,recruitNumber,workLocation,publishTime
-
-            item = TencentItem()
-            item['name']=name.encode('utf-8')
-            item['detailLink']=detailLink.encode('utf-8')
-            item['positionInfo']=positionInfo.encode('utf-8')
-            item['peopleNumber']=peopleNumber.encode('utf-8')
-            item['workLocation']=workLocation.encode('utf-8')
-            item['publishTime']=publishTime.encode('utf-8')
 
             yield item
 
-    # parse() 方法不需要写     
-    # def parse(self, response):                                              
-    #     pass
+            # for i in range(1, 200):
+            #     newurl = "https://hr.tencent.com/position.php?lid=2218&start=%d#a" % (i*10)
+            #     yield scrapy.Request(newurl, callback=self.parse)
+
 ```
 
 运行：`scrapy crawl tencent`
@@ -294,7 +281,6 @@ Scrapy提供了log功能，可以通过 logging 模块使用。
 ```
 LOG_FILE = "TencentSpider.log"
 LOG_LEVEL = "INFO"
-
 ```
 
 #### Log levels {#log-levels}
@@ -304,6 +290,7 @@ LOG_LEVEL = "INFO"
 * CRITICAL - 严重错误\(critical\)
 
 * ERROR - 一般错误\(regular errors\)
+
 * WARNING - 警告信息\(warning messages\)
 * INFO - 一般信息\(informational messages\)
 * DEBUG - 调试信息\(debugging messages\)

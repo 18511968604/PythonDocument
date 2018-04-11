@@ -161,10 +161,6 @@ class MytencentSpider(scrapy.Spider):
             for i in range(1, 200):
                 newurl = "https://hr.tencent.com/position.php?lid=2218&start=%d#a" % (i*10)
                 yield scrapy.Request(newurl, callback=self.parse)
-
-
-
-
 ```
 
 * 编写pipeline.py文件
