@@ -120,6 +120,7 @@
   * [3scrapy shell](3scrapy-shell.md)
   * [4scrapy pipelines](4scrapy-pipelines.md)
   * [5spider](5spider.md)
+  * [6crawlSpider](crawlspider.md)
 * [13scrapy](12ren-shi-scrapy.md)
   * [01tianyaScrapy](12ren-shi-scrapy/01tianyascrapy.md)
     * [mytianya](12ren-shi-scrapy/01tianyascrapy/mytianya.md)
