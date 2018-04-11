@@ -32,7 +32,6 @@ class Request(object_ref):
         if self._meta is None:
             self._meta = {}
         return self._meta
-
 ```
 
 其中，比较常用的参数：
@@ -70,7 +69,6 @@ encoding: 使用默认的 'utf-8' 就行。
 dont_filter: 表明该请求不由调度器过滤。这是当你想使用多次执行相同的请求,忽略重复的过滤器。默认为False。
 
 errback: 指定错误处理函数
-
 ```
 
 # Response {#response}
@@ -93,18 +91,15 @@ class Response(object_ref):
         except AttributeError:
             raise AttributeError("Response.meta not available, this response " \
                 "is not tied to any request")
-
 ```
 
 大部分参数和上面的差不多：
 
 ```
-
 status: 响应码
 _set_body(body)： 响应体
 _set_url(url)：响应url
 self.request = request
-
 ```
 
 ## 发送POST请求 {#发送post请求}
@@ -186,11 +181,6 @@ class ZhihuSipder(CrawlSpider) :
     )
 
     headers = {
-    "Accept": "*/*",
-    "Accept-Encoding": "gzip,deflate",
-    "Accept-Language": "en-US,en;q=0.8,zh-TW;q=0.6,zh;q=0.4",
-    "Connection": "keep-alive",
-    "Content-Type":" application/x-www-form-urlencoded; charset=UTF-8",
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
     "Referer": "http://www.zhihu.com/"
     }
@@ -237,7 +227,6 @@ class ZhihuSipder(CrawlSpider) :
 #### Item类设置 {#item类设置}
 
 ```py
-
 from scrapy.item import Item, Field
 
 class ZhihuItem(Item):
