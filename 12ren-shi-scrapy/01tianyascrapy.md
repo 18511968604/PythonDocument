@@ -1,6 +1,6 @@
 ### scrapy startproject tianya
 
-### cd tianya/spiders
+### cd tianya
 
 ### scrapy genspider mytianya bbs.tianya.cn
 
