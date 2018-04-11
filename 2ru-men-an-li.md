@@ -13,7 +13,6 @@
 
 ```
 scrapy startproject mySpider
-
 ```
 
 * 其中， mySpider 为项目名称，可以看到将会创建一个 mySpider 文件夹，目录结构大致如下：
@@ -36,7 +35,7 @@ scrapy startproject mySpider
 
 ## 二、明确目标\(mySpider/items.py\) {#二、明确目标myspideritemspy}
 
-我们打算抓取：http://bbs.tianya.cn/post-140-393977-1.shtml网站里的邮箱。
+我们打算抓取：[http://bbs.tianya.cn/post-140-393977-1.shtml网站里的邮箱。](http://bbs.tianya.cn/post-140-393977-1.shtml网站里的邮箱。)
 
 1. 打开mySpider目录下的items.py
 
@@ -52,7 +51,6 @@ import scrapy
 
 class TianyaItem(scrapy.Item):
     email = scrapy.Field()
-
 ```
 
 ## 三、制作爬虫 （spiders/itcastSpider.py） {#三、制作爬虫-（spidersitcastspiderpy）}
@@ -69,7 +67,6 @@ class TianyaItem(scrapy.Item):
 
 ```
 scrapy genspider mytianya "bbs.tianya.cn"
-
 ```
 
 * 打开 mySpider/spider目录里的 mytianya .py，默认增加了下列代码:
@@ -106,8 +103,6 @@ class MytianyaSpider(scrapy.Spider):
 
 ##### 将start\_urls的值修改为需要爬取的第一个url {#将starturls的值修改为需要爬取的第一个url}
 
-
-
 ##### 修改parse\(\)方法 {#修改parse方法}
 
 ```py
@@ -140,7 +135,6 @@ scrapy crawl mytianya
 ##### scrapy保存信息的最简单的方法主要有四种，-o 输出指定格式的文件，，命令如下： {#scrapy保存信息的最简单的方法主要有四种，o-输出指定格式的文件，，命令如下：}
 
 ```
-
 scrapy crawl mytianya-o mytianya.json
 
 
@@ -154,7 +148,6 @@ scrapy crawl mytianya-o mytianya.csv
 
 
 scrapy crawl mytianya-o mytianya.xml
-
 ```
 
 ---
@@ -165,7 +158,7 @@ scrapy crawl mytianya-o mytianya.xml
 
 #### 请思考 yield 在这里的作用： {#请思考-yield-在这里的作用：}
 
-```
+```py
     def parse(self, response):
         html = response.body.decode()
         # ftsd@21cn.com
@@ -176,12 +169,12 @@ scrapy crawl mytianya-o mytianya.xml
             item = items.TianyaItem()
             item["email"] = e
             # mydict[e] = "http://bbs.tianya.cn/post-140-393977-1.shtml"
-           
+
             # mydict.append(item)
-            
+
             #将获取的数据交给pipelines
             yield mydict
-            
+
         # 返回数据，不经过pipeline
         return mydict
 ```

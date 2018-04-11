@@ -117,6 +117,7 @@
 * 12认识scrapy
   * [1配置安装](1pei-zhi-an-zhuang.md)
   * [2入门案例](2ru-men-an-li.md)
+  * [3scrapy shell](3scrapy-shell.md)
 * [13scrapy](12ren-shi-scrapy.md)
   * [01tianyaScrapy](12ren-shi-scrapy/01tianyascrapy.md)
     * [mytianya](12ren-shi-scrapy/01tianyascrapy/mytianya.md)
