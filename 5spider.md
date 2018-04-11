@@ -124,92 +124,74 @@ class Spider(object_ref):
 
 ```py
 class TencentItem(scrapy.Item):
-    name = scrapy.Field()
-    detailLink = scrapy.Field()
-    positionInfo = scrapy.Field()
-    peopleNumber = scrapy.Field()
-    workLocation = scrapy.Field()
-    publishTime = scrapy.Field()
-
+    # define the fields for your item here like:
+    jobTitle = scrapy.Field()
+    jobCategories = scrapy.Field()
+    number = scrapy.Field()
+    location = scrapy.Field()
+    releasetime = scrapy.Field()
 ```
 
 * 编写tencent.py
 
 ```py
-from mySpider.items import TencentItem
-import scrapy
+# -*- coding: utf-8 -*-
 import re
 
-class TencentSpider(scrapy.Spider):
-    name = "tencent"
-    allowed_domains = ["hr.tencent.com"]
-    start_urls = [
-        "http://hr.tencent.com/position.php?&start=0#a"
-    ]
+import scrapy
+from Tencent import items
+
+class MytencentSpider(scrapy.Spider):
+    name = 'myTencent'
+    allowed_domains = ['hr.tencent.com']
+    start_urls = ['https://hr.tencent.com/position.php?lid=2218&start=0#a']
 
     def parse(self, response):
-        for each in response.xpath('//*[@class="even"]'):
+        for data in response.xpath("//tr[@class=\"even\"] | //tr[@class=\"odd\"]"):
 
-            item = TencentItem()
-            name = each.xpath('./td[1]/a/text()').extract()[0]
-            detailLink = each.xpath('./td[1]/a/@href').extract()[0]
-            positionInfo = each.xpath('./td[2]/text()').extract()[0]
-            peopleNumber = each.xpath('./td[3]/text()').extract()[0]
-            workLocation = each.xpath('./td[4]/text()').extract()[0]
-            publishTime = each.xpath('./td[5]/text()').extract()[0]
-
-            #print name, detailLink, catalog, peopleNumber, workLocation,publishTime
-
-            item['name'] = name.encode('utf-8')
-            item['detailLink'] = detailLink.encode('utf-8')
-            item['positionInfo'] = positionInfo.encode('utf-8')
-            item['peopleNumber'] = peopleNumber.encode('utf-8')
-            item['workLocation'] = workLocation.encode('utf-8')
-            item['publishTime'] = publishTime.encode('utf-8')
-
-            curpage = re.search('(\d+)',response.url).group(1)
-            page = int(curpage) + 10
-            url = re.sub('\d+', str(page), response.url)
-
-            # 发送新的url请求加入待爬队列，并调用回调函数 self.parse
-            yield scrapy.Request(url, callback = self.parse)
-
-            # 将获取的数据交给pipeline
+            item = items.TencentItem()
+            item["jobTitle"] = data.xpath("./td[1]/a/text()")[0].extract()
+            item["jobLink"] = data.xpath("./td[1]/a/@href")[0].extract()
+            item["jobCategories"] = data.xpath("./td[1]/a/text()")[0].extract()
+            item["number"] = data.xpath("./td[2]/text()")[0].extract()
+            item["location"] = data.xpath("./td[3]/text()")[0].extract()
+            item["releasetime"] = data.xpath("./td[4]/text()")[0].extract()
             yield item
+
+            for i in range(1, 200):
+                newurl = "https://hr.tencent.com/position.php?lid=2218&start=%d#a" % (i*10)
+                yield scrapy.Request(newurl, callback=self.parse)
+
+
+
 
 ```
 
 * 编写pipeline.py文件
 
 ```py
-import json
-
-#class ItcastJsonPipeline(object):
-class TencentJsonPipeline(object):
-
+class TencentPipeline(object):
     def __init__(self):
-        #self.file = open('teacher.json', 'wb')
-        self.file = open('tencent.json', 'wb')
+        self.file = open("tencent.txt", "w", encoding="utf-8")
 
     def process_item(self, item, spider):
-        content = json.dumps(dict(item), ensure_ascii=False) + "\n"
-        self.file.write(content)
+        line = str(item) + "\r\n"
+        self.file.write(line)
+        self.file.flush()
         return item
 
-    def close_spider(self, spider):
+    def __del__(self):
         self.file.close()
-
 ```
 
 * 在 setting.py 里设置ITEM\_PIPELINES
 
 ```py
 ITEM_PIPELINES = {
-    
+
 "mySpider.pipelines.TencentJsonPipeline":300
 
 }
-
 ```
 
 * 执行爬虫：
