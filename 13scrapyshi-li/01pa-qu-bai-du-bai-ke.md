@@ -84,5 +84,31 @@ PROXIES = [
 ]
 ```
 
+middlewares.py
+
+```py
+from scrapy import signals
+import random
+import base64 #编码
+from .settings import USER_AGENTS #导入浏览器模拟，导入代理
+from .settings import PROXIES
+#随机浏览器
+class  RandomUserAgent:
+    def process_request(self,request,spider):
+        useragent=random.choice(USER_AGENTS)#随机选择一个代理
+        request.headers.setdefault("User-Agent",useragent) #代理
+#随机代理
+class  RandomProxy:
+    def process_request(self,request,spider):
+        proxy=random.choice(PROXIES)
+        if proxy["user_passwd"] is None:
+            request.meta["proxy"]="http://"+proxy["ip_port"] #没有代理密码就直接登陆
+        else:
+            #账户密码进程编码
+            base64_userpassword=base64.b64encode(proxy["user_passwd"].encode("utf-8") )
+            request.headers["Proxy-Authorization"]="Basic "+ base64_userpassword.decode("utf-8")
+            request.meta["proxy"]="http://"+proxy["ip_port"]
+```
+
 
 
