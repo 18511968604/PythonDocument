@@ -1,48 +1,46 @@
 ```py
 # -*- coding: utf-8 -*-
-import scrapy
-import baidubaike.items
-import re
-from bs4 import BeautifulSoup
-from  scrapy.spiders import CrawlSpider,Rule #提取超链接的规则
-from  scrapy.linkextractors  import LinkExtractor #提取超链接
 
-class BaikeSpider(CrawlSpider):
-    name = 'baike'
+import scrapy
+from bs4 import BeautifulSoup
+from baidubaike import items
+from scrapy.spiders import CrawlSpider, Rule  # 爬取规则
+from scrapy.linkextractors import LinkExtractor  # 提取超链接
+
+
+class MybaikeSpider(CrawlSpider):
+    name = 'mybaike'
     allowed_domains = ['baike.baidu.com']
     start_urls = ['https://baike.baidu.com/item/Python/407313']
-    # response提取超链接,
-    # response提取超链接,
-    pagelinks = LinkExtractor(allow=("/item/.*"))
-    # 根据规则提取的链接，用一个函数处理，follow.是否一直循环下去
-    rules = [Rule(pagelinks, callback="parse_item", follow=True)]  # 返回的urllist
 
+    rules = [Rule(LinkExtractor(allow=("item/.*")), callback="parse_page", follow=True)]
 
-    def gettitle(self,pagedata):
-        soup = BeautifulSoup(pagedata, "html.parser")  # 解析
-        list1 = soup.find_all("h1")
-        list2 = soup.find_all("h2")
-        if len(list1) != 0 and len(list2) != 0:
-            return (list1[0].text, list2[0].text)
-        elif len(list1) != 0 and len(list2) == 0:
-            return list1[0].text
-        else:
-            return None
-    def getcontent(self,pagedata):
-        soup = BeautifulSoup(pagedata, "html.parser")  # 解析
-        summary = soup.find_all("div", class_="lemma-summary")
-        if len(summary) != 0:
-            return summary[0].get_text()
-        else:
-            return None
-    def parse_item(self, response):
-        pagedata=response.body
-        url=response.url   #body代表数据，url当前连接
-        baikeitem=baidubaike.items.BaidubaikeItem()
-        baikeitem["name"]= str(self.gettitle(pagedata))
-        baikeitem["content"] =str(self.getcontent(pagedata))
-        baikeitem["url"] =response.url
-        yield  baikeitem
+    # 获取页面信息
+    def getInf(self, pagedata):
+        soup = BeautifulSoup(pagedata, "lxml")
+
+        # 获取主标题和副标题
+        masterTitle = soup.select(".lemmaWgt-lemmaTitle-title > h1")[0].get_text()
+        secondTitle = soup.select(".lemmaWgt-lemmaTitle-title > h2")[0].get_text()
+
+        # print(masterTitle, secondTitle)
+        # 获取文本
+        content = soup.find_all("div", class_="lemma-summary")[0].get_text()
+        # print(content)
+        if len(masterTitle) == 0:
+            masterTitle, secondTitle, content = '没有'
+
+        return masterTitle, secondTitle, content
+
+    def parse_page(self, response):
+        result = self.getInf(response.body)
+        item = items.BaidubaikeItem()
+        item["url"] = response.url
+        item["masterTitle"] = result[0]
+        item["secondTitle"] = result[1]
+        item["content"] = result[2]
+        yield item
+
 ```
 
 items.py
@@ -50,9 +48,10 @@ items.py
 ```py
 class BaidubaikeItem(scrapy.Item):
     # define the fields for your item here like:
-    name = scrapy.Field()
-    content=scrapy.Field()
-    url=scrapy.Field()
+    url = scrapy.Field()
+    masterTitle = scrapy.Field()
+    secondTitle = scrapy.Field()
+    content = scrapy.Field()
 ```
 
 setting.py

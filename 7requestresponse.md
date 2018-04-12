@@ -158,6 +158,22 @@ class LoginSpider(scrapy.Spider):
         # continue scraping with authenticated session...
 ```
 
+**模拟浏览器登录**
+
+**start\_requests\(\)方法，可以返回一个请求给爬虫的起始网站，这个返回的请求相当于start\_urls，start\_requests\(\)返回的请求会替代start\_urls里的请求**
+
+**Request\(\)get请求，可以设置，url、cookie、回调函数**
+
+**FormRequest.from\_response\(\)表单post提交，第一个必须参数，上一次响应cookie的response对象，其他参数，cookie、url、表单内容等**
+
+**yield Request\(\)可以将一个新的请求返回给爬虫执行**
+
+  
+**在发送请求时cookie的操作，**  
+**meta={'cookiejar':1}表示开启cookie记录，首次请求时写在Request\(\)里**  
+**meta={'cookiejar':response.meta\['cookiejar'\]}表示使用上一次response的cookie，写在FormRequest.from\_response\(\)里post授权**  
+**meta={'cookiejar':True}表示使用授权后的cookie访问需要登录查看的页面**
+
 #### zhihuSpider.py爬虫代码 {#zhihuspiderpy爬虫代码}
 
 ```py
