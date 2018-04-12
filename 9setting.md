@@ -32,7 +32,6 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'en',
     }
-
     ```
 
     Scrapy HTTP Request使用的默认header。
@@ -69,8 +68,9 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
     'mySpider.pipelines.SomethingPipeline': 300,
     'mySpider.pipelines.ItcastJsonPipeline': 800,
     }
-
     ```
+* `LOG_FILE = "logname.txt"`
+
 * `LOG_ENABLED`
 
   * 默认: True
@@ -107,7 +107,6 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
       {'ip_port': '122.96.59.104:80', 'password': ''},
       {'ip_port': '122.224.249.122:8088', 'password':''},
     ]
-
     ```
 * ##### `COOKIES_ENABLED = False` {#cookiesenabled--false}
 
