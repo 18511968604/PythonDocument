@@ -70,7 +70,6 @@ class Renren2Spider(scrapy.Spider):
     def parse_newpage(self, response):
         with open("xiao.html", "w") as filename:
             filename.write(response.body)
-
 ```
 
 #### 策略三：直接使用保存登陆状态的Cookie模拟登陆 {#策略三：直接使用保存登陆状态的cookie模拟登陆}
