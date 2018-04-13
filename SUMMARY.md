@@ -137,4 +137,5 @@
     * [scheduler](14scrapy-redis/1yuan-ma-fen-xi/scheduler.md)
     * [spider](14scrapy-redis/1yuan-ma-fen-xi/spider.md)
   * [2安装redis](14scrapy-redis/2an-zhuang-redis.md)
+  * [3源码项目演示](14scrapy-redis/3yuan-ma-xiang-mu-yan-shi.md)
 
