@@ -103,6 +103,8 @@ RedisSpider类 不需要写`allowd_domains`和`start_urls`：
 
 3. Slaver端爬虫获取到请求，开始爬取。
 
+  lrange  mycrawler:start\_url 0 -1
+
 ### 三、mycrawler\_redis \(class MyCrawler\(RedisCrawlSpider\)\) {#三、mycrawlerredis-class-mycrawlerrediscrawlspider}
 
 这个RedisCrawlSpider类爬虫继承了RedisCrawlSpider，能够支持分布式的抓取。因为采用的是crawlSpider，所以需要遵守Rule规则，以及callback不能写parse\(\)方法。
