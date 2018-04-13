@@ -135,4 +135,5 @@
     * [pipelines](14scrapy-redis/1yuan-ma-fen-xi/pipeline.md)
     * [queue](14scrapy-redis/1yuan-ma-fen-xi/queue.md)
     * [scheduler](14scrapy-redis/1yuan-ma-fen-xi/scheduler.md)
+    * [spider](14scrapy-redis/1yuan-ma-fen-xi/spider.md)
 
