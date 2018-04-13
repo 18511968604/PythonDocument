@@ -130,4 +130,9 @@
 * [14scrapy-redis](14scrapy-redis.md)
   * [1源码分析](14scrapy-redis/1yuan-ma-fen-xi.md)
     * [connection](14scrapy-redis/1yuan-ma-fen-xi/connection.md)
+    * [dupefilter](14scrapy-redis/1yuan-ma-fen-xi/dupefilter.md)
+    * [pickecompat](14scrapy-redis/1yuan-ma-fen-xi/pickecompat.md)
+    * [pipelines](14scrapy-redis/1yuan-ma-fen-xi/pipeline.md)
+    * [queue](14scrapy-redis/1yuan-ma-fen-xi/queue.md)
+    * [scheduler](14scrapy-redis/1yuan-ma-fen-xi/scheduler.md)
 
