@@ -103,7 +103,7 @@ RedisSpider类 不需要写`allowd_domains`和`start_urls`：
 
 3. Slaver端爬虫获取到请求，开始爬取。
 
-  lrange  mycrawler:start\_url 0 -1
+   #### `lrange  mycrawler:start_url 0 -1`
 
 ### 三、mycrawler\_redis \(class MyCrawler\(RedisCrawlSpider\)\) {#三、mycrawlerredis-class-mycrawlerrediscrawlspider}
 
