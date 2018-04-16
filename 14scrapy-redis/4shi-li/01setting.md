@@ -27,10 +27,10 @@ ITEM_PIPELINES = {
 }
 
 # 指定redis数据库的连接参数
-# REDIS_PASS是我自己加上的redis连接密码（默认不做）
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
-#REDIS_PASS = 'redisP@ssw0rd'
+# 密码登陆
+# REDIS_URL="redis://[user]:password@localhost:port"
 
 # LOG等级
 LOG_LEVEL = 'DEBUG'
