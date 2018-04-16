@@ -1,6 +1,16 @@
 ### 添加/example/redis\_client.py
 
+### 使用带密码访问redis数据库
+
+修改setting文件
+
+```
+REDIS_URL = "redis://:123456@localhost:6379"
+
+```
+
 ```py
+
 #!C:\Python36\python.exe
 # -*- coding:utf-8 -*-
 import redis
@@ -71,7 +81,6 @@ class MyCrawler(RedisCrawlSpider):
         item["secondTitle"] = result[1]
         item["content"] = result[2]
         yield item
-
 ```
 
 
