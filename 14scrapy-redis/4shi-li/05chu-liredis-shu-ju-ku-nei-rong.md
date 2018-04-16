@@ -13,7 +13,7 @@ def main():
     rediscli = redis.StrictRedis(host='127.0.0.1', port=6379, password='123456', db=0)
     # 指定mysql数据库
     mysqlcli = MySQLdb.connect(host='127.0.0.1', user='root', passwd='123456', db='fate', port=3306,
-                               use_unicode=True)
+                               charset='utf8')
     print(rediscli)
     while True:
         # FIFO模式为 blpop，LIFO模式为 brpop，获取键值
