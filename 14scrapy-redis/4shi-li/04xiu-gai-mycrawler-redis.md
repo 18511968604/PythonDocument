@@ -28,12 +28,6 @@ class MyCrawler(RedisCrawlSpider):
 
     rules = [Rule(LinkExtractor(allow=("item/.*")), callback="parse_page", follow=True)]
 
-    def __init__(self, *args, **kwargs):
-        # Dynamically define the allowed domains list.
-        domain = kwargs.pop('https://baike.baidu.com', '')
-        self.allowed_domains = filter(None, domain.split(','))
-        super(MyCrawler, self).__init__(*args, **kwargs)
-
     def set_crawler(self, crawer):
         CrawlSpider.set_crawler(self, crawer)  # 设置默认爬去
         RedisMixin.setup_redis(self)  # url由redis
