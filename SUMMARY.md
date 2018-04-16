@@ -138,6 +138,9 @@
     * [spider](14scrapy-redis/1yuan-ma-fen-xi/spider.md)
   * [2安装redis](14scrapy-redis/2an-zhuang-redis.md)
   * [3源码项目演示](14scrapy-redis/3yuan-ma-xiang-mu-yan-shi.md)
-  * [4实例](14scrapy-redis/4shi-li.md)
+  * [4实例爬取百度百科](14scrapy-redis/4shi-li.md)
     * [01setting](14scrapy-redis/4shi-li/01setting.md)
+    * [02修改dmoz](14scrapy-redis/4shi-li/02xiu-gai-dmoz.md)
+    * [03修改myspider\_redis](14scrapy-redis/4shi-li/03xiu-gaimyspider-redis.md)
+    * [04修改mycrawler\_redis](14scrapy-redis/4shi-li/04xiu-gai-mycrawler-redis.md)
 
