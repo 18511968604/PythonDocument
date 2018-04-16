@@ -143,4 +143,5 @@
     * [02修改dmoz](14scrapy-redis/4shi-li/02xiu-gai-dmoz.md)
     * [03修改myspider\_redis](14scrapy-redis/4shi-li/03xiu-gaimyspider-redis.md)
     * [04修改mycrawler\_redis](14scrapy-redis/4shi-li/04xiu-gai-mycrawler-redis.md)
+    * [05处理redis数据库内容](14scrapy-redis/4shi-li/05chu-liredis-shu-ju-ku-nei-rong.md)
 

@@ -45,6 +45,8 @@ DEFAULT_REQUEST_HEADERS = {
     'Connection': 'keep-alive',
     'Accept-Encoding': 'gzip, deflate, sdch'
 }
+
+#REDIS_ENCODING = 'utf-8'
 ```
 
 
