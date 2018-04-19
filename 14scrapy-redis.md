@@ -29,7 +29,6 @@ Scrapy中跟“待爬队列”直接相关的就是调度器`Scheduler`，它负
         优先级1 : 队列1
         优先级2 : 队列2
     }
-
 ```
 
 然后根据request中的优先级，来决定该入哪个队列，出列时则按优先级较小的优先出列。为了管理这个比较高级的队列字典，Scheduler需要提供一系列的方法。但是原来的Scheduler已经无法使用，所以使用Scrapy-redis的scheduler组件。
@@ -49,7 +48,6 @@ Scrapy中用集合实现这个request去重功能，Scrapy中把已经发送的r
         self.fingerprints.add(fp)
         if self.file:
             self.file.write(fp + os.linesep)
-
 ```
 
 在scrapy-redis中去重是由`Duplication Filter`组件来实现的，它通过redis的set 不重复的特性，巧妙的实现了Duplication Filter去重。scrapy-redis调度器从引擎接受request，将request的指纹存⼊redis的set检查是否重复，并将不重复的request push写⼊redis的 request queue。
