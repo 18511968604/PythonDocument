@@ -207,7 +207,7 @@ class scrapy.spiders.Rule(
     page_lx.extract_links(response)
    ```
 
-![](../images/tencent_rule.png)
+
 
 ## CrawlSpider 版本 {#crawlspider-版本}
 
@@ -249,7 +249,7 @@ class MytencentSpider(CrawlSpider):
     rules = [
         Rule(page_lx, callback="parseContent", follow=True)
     ]
-    
+
     # parse(self, response)
     def parseContent(self, response):
         for data in response.xpath("//tr[@class=\"even\"] | //tr[@class=\"odd\"]"):
@@ -267,7 +267,6 @@ class MytencentSpider(CrawlSpider):
             # for i in range(1, 200):
             #     newurl = "https://hr.tencent.com/position.php?lid=2218&start=%d#a" % (i*10)
             #     yield scrapy.Request(newurl, callback=self.parse)
-
 ```
 
 运行：`scrapy crawl tencent`
@@ -292,6 +291,7 @@ LOG_LEVEL = "INFO"
 * ERROR - 一般错误\(regular errors\)
 
 * WARNING - 警告信息\(warning messages\)
+
 * INFO - 一般信息\(informational messages\)
 * DEBUG - 调试信息\(debugging messages\)
 
