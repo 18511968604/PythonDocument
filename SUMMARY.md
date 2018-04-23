@@ -96,7 +96,7 @@
 * [9词云](9ci-yun.md)
   * [01获取智联招聘需求](9ci-yun/01zhi-lian-zhao-pin-ci-yun.md)
   * [02生成词云](9ci-yun/02.md)
-  * [workinfo.txt](9ci-yun/workinfotxt.md)
+  * [workinfo](9ci-yun/workinfotxt.md)
   * [03MatplotlibDemo](9ci-yun/03matplotlibdemo.md)
   * [04数据排序](9ci-yun/04shu-ju-pai-xu.md)
 * [10多协程线程进程爬取](10duo-xie-cheng-xian-cheng-jin-cheng-pa-qu.md)
