@@ -17,7 +17,7 @@ header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"}
 request = urllib2.Request(url, headers=header)  # 发送请求，伪装浏览器访问
 request.add_header("Connection", "keep-alive")  # 一直活着
-response = urllib2.urlopen(request)
+response = urllib2.urlopen(request, context=context)
 print response.read()
 ```
 
