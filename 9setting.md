@@ -112,5 +112,7 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
 
   * 禁用Cookies
 
+* **`IMAGES_STORE = '/path'`**
 
+    禁用Cookies
 
