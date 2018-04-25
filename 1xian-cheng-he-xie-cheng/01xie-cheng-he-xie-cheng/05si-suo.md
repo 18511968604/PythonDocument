@@ -10,7 +10,7 @@ import time
 # 自尊锁
 boyHonor = threading.Lock()
 girlHonor = threading.Lock()
-honor = threading.RLock()
+
 
 
 class Boy(Thread):
@@ -54,7 +54,6 @@ if __name__ == '__main__':
     Boy().start()
     Girl().start()
     pass
-
 ```
 
 
