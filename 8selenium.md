@@ -16,6 +16,8 @@
 
 
 
+## WebDriver常用方法
+
 * ### clear\(\)
 
 Clears the text if it’s a text entry element.
@@ -28,11 +30,12 @@ Clicks the element.
 
 Synchronously Executes JavaScript in the current window/frame.
 
+Args:  
+script: The JavaScript to execute.  
+，\*args: Any applicable arguments for your JavaScript.
 
-
-Args:	script: The JavaScript to execute.，\*args: Any applicable arguments for your JavaScript.
-
-Usage:	driver.execute\_script\(‘return document.title;’\)
+Usage:  
+driver.execute\_script\(‘return document.title;’\)
 
 * ### find\_element\(by='id', value=None\)
 
