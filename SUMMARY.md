@@ -127,6 +127,7 @@
 * [13scrapy实例](13scrapyshi-li.md)
   * [01爬取百度百科](13scrapyshi-li/01pa-qu-bai-du-bai-ke.md)
   * [02模拟登陆人人网](13scrapyshi-li/02mo-ni-deng-lu-ren-ren-wang.md)
+  * [03scrapySelenium爬取知乎](13scrapyshi-li/03scrapyseleniumpa-qu-zhi-hu.md)
 * [14scrapy-redis](14scrapy-redis.md)
   * [1源码分析](14scrapy-redis/1yuan-ma-fen-xi.md)
     * [connection](14scrapy-redis/1yuan-ma-fen-xi/connection.md)
