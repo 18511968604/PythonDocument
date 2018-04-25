@@ -111,8 +111,7 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
 * ##### `COOKIES_ENABLED = False` {#cookiesenabled--false}
 
   * 禁用Cookies
+* `IMAGES_STORE = '/path' `：下载图片，图片存储在文件中（一个图片一个文件），并使用它们URL的[SHA1 hash](http://en.wikipedia.org/wiki/SHA_hash_functions)作为文件名
 
-* **`IMAGES_STORE = '/path'`**
-
-    禁用Cookies
+ 
 
