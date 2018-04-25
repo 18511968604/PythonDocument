@@ -14,6 +14,8 @@
 
 链接：[https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w](https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w) 密码：l41g
 
+
+
 * ### clear\(\)
 
 Clears the text if it’s a text entry element.
@@ -21,6 +23,16 @@ Clears the text if it’s a text entry element.
 * ### click\(\)
 
 Clicks the element.
+
+* ### execute\_script\(script, \*args\)
+
+Synchronously Executes JavaScript in the current window/frame.
+
+
+
+Args:	script: The JavaScript to execute.，\*args: Any applicable arguments for your JavaScript.
+
+Usage:	driver.execute\_script\(‘return document.title;’\)
 
 * ### find\_element\(by='id', value=None\)
 
