@@ -1,5 +1,5 @@
 ```py
-# encoding:utf-8
+# coding:utf-8
 import urllib
 from bs4 import BeautifulSoup
 from urllib import request
@@ -20,7 +20,6 @@ def download(url):
 
 
 download("http://sou.zhaopin.com/jobs/searchresult.ashx?jl=%E6%B7%B1%E5%9C%B3&kw=python&sm=0&p=1")
-
 ```
 
 
