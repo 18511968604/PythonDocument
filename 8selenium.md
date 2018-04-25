@@ -14,8 +14,6 @@
 
 链接：[https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w](https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w) 密码：l41g
 
-
-
 ## WebDriver常用方法
 
 * ### clear\(\)
@@ -32,7 +30,7 @@ Synchronously Executes JavaScript in the current window/frame.
 
 Args:  
 script: The JavaScript to execute.  
-，\*args: Any applicable arguments for your JavaScript.
+\*args: Any applicable arguments for your JavaScript.
 
 Usage:  
 driver.execute\_script\(‘return document.title;’\)
