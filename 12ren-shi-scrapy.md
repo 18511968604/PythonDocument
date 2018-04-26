@@ -8,7 +8,7 @@
 
 ## Scrapy架构图\(绿线是数据流向\)： {#scrapy架构图绿线是数据流向：}
 
-![](../images/scrapy_all.png)![](/assets/scrapy_all.png)
+![](/assets/scrapy_all.png)
 
 * `Scrapy Engine(引擎)`: 负责`Spider`、`ItemPipeline`、`Downloader`、`Scheduler`中间的通讯，信号、数据传递等。
 
@@ -56,7 +56,24 @@
 
 14. ```管道``调度器```：好的，现在就做！
 
-**注意！只有当`调度器`中不存在任何request了，整个程序才会停止，（也就是说，对于下载失败的URL，Scrapy也会重新下载。）**
+**注意！只有当**`调度器`**中不存在任何request了，整个程序才会停止，（也就是说，对于下载失败的URL，Scrapy也会重新下载。）**
+
+### 安装
+
+```
+    1、安装wheel
+        pip install wheel
+    2、安装lxml
+        
+    3、安装pyopenssl
+        
+    4、安装Twisted
+        
+    5、安装pywin32
+        
+    6、安装scrapy
+        pip install scrapy
+```
 
 ### 制作 Scrapy 爬虫 一共需要4步： {#制作-scrapy-爬虫-一共需要4步：}
 
