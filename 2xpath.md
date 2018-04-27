@@ -10,6 +10,14 @@ XPath即为XML路径语言，它是一种用来确定[XML](https://baike.baidu.c
 * XPath 是一个 W3C 标准
 * ![](/assets/xml.png)
 
+## 使用xpath
+
+```
+# pip install lxml
+import lxml
+from lxml import etree
+```
+
 ## XPath 术语
 
 ### 节点（Node）
@@ -242,7 +250,7 @@ XPath 通配符可用来选取未知的 XML 元素。
 
 | 路径表达式 | 结果 |
 | :--- | :--- |
-| //book/title \ \| //book/price | 选取 book 元素的所有 title 和 price 元素。 |
+| //book/title  \| //book/price | 选取 book 元素的所有 title 和 price 元素。 |
 | //title \| //price | 选取文档中的所有 title 和 price 元素。 |
 | /bookstore/book/title \| //price | 选取属于 bookstore 元素的 book 元素的所有 title 元素，以及文档中所有的 price 元素。 |
 
