@@ -1,6 +1,6 @@
 ## XPath
 
-XPath即为XML路径语言，它是一种用来确定[XML](https://baike.baidu.com/item/XML)（[标准通用标记语言](https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E9%80%9A%E7%94%A8%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80)的子集）文档中某部分位置的语言。XPath基于XML的树状结构，有不同类型的节点，包括元素节点，属性节点和文本节点，提供在数据结构树中找寻节点的能力。
+XPath即为XML路径语言，它是一种用来确定[XML](https://baike.baidu.com/item/XML)（[标准通用标记语言](https://baike.baidu.com/item/标准通用标记语言)的子集）文档中某部分位置的语言。XPath基于XML的树状结构，有不同类型的节点，包括元素节点，属性节点和文本节点，提供在数据结构树中找寻节点的能力。
 
 ## 什么是 XPath?
 
@@ -8,6 +8,7 @@ XPath即为XML路径语言，它是一种用来确定[XML](https://baike.baidu.c
 * XPath 包含一个标准函数库
 * XPath 是 XSLT 中的主要元素
 * XPath 是一个 W3C 标准
+* ![](/assets/xml.png)
 
 ## XPath 术语
 
@@ -37,8 +38,7 @@ XPath即为XML路径语言，它是一种用来确定[XML](https://baike.baidu.c
 ```
 <bookstore> （文档节点）
 <author>J K. Rowling</author> （元素节点）
-lang="en" （属性节点） 
-
+lang="en" （属性节点）
 ```
 
 ### 基本值（或称原子值，Atomic value）
