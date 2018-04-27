@@ -20,11 +20,11 @@ from lxml import etree
 
 ## XPath Helper插件
 
-chrome插件网：http://www.cnplugins.com/
+chrome插件网：[http://www.cnplugins.com/](http://www.cnplugins.com/)
 
 添加插件
 
-Ctrl + Shift + X打开插件
+Ctrl + Shift + X打开或关闭插件
 
 ## XPath 术语
 
