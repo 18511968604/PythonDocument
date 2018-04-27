@@ -18,6 +18,14 @@ import lxml
 from lxml import etree
 ```
 
+## XPath Helper插件
+
+chrome插件网：http://www.cnplugins.com/
+
+添加插件
+
+Ctrl + Shift + X打开插件
+
 ## XPath 术语
 
 ### 节点（Node）
