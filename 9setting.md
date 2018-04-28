@@ -120,6 +120,7 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
       'samll' : (50, 50),
       'big' : (270, 270)
   }
+  MEDIA_ALLOW_REDIRECTS = True # 重定向
   ```
 
 ```
