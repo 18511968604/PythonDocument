@@ -52,7 +52,6 @@ def mymain(name, password):
 
 if __name__ == '__main__':
     mymain(input("输入身份证号"), input("输入密码（默认身份证后六位）"))
-
 ```
 
 

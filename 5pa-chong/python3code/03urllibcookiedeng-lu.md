@@ -71,7 +71,6 @@ indexurl = "http://zhibo.renren.com/top"
 
 print("==================")
 print(urllib.request.urlopen(indexurl).read().decode())
-
 ```
 
 

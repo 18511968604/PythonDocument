@@ -93,7 +93,6 @@
   * [index](2xpath/index.md)
 * [8selenium](8selenium.md)
   * [01selenim基础](01selenimji-chu.md)
-  * [02selenium模拟自动测评](02seleniummo-ni-zi-dong-ce-ping.md)
   * [03selenium模拟QQ登陆](03seleniummo-ni-qq-deng-lu.md)
   * [04selenium模拟12306购票](04seleniummo-ni-12306-gou-piao.md)
 * [9词云](9ci-yun.md)
