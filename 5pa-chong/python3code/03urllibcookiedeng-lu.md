@@ -1,55 +1,77 @@
 ```py
-import urllib.error, urllib.request, urllib.parse
-import http.cookiejar
+#!C:\Python36\python.exe
+# -*- coding:utf-8 -*-
+'''
+@Time    : 2018/5/4 16:11
+@Author  : Fate
+@File    : urllibCookie.py
+'''
+# coding=utf-8
+import urllib
+from urllib import request, parse
+from http import cookiejar
 
-LOGIN_URL = 'http://******.kiwisns.com/postLogin'
-#get_url为使用cookie所登陆的网址，该网址必须先登录才可
-get_url = 'https://******.kiwisns.com/admin/affiliate/pending'
-values = {'email':'******@user.com','password':'123456','auth':'admin'}
-postdata = urllib.parse.urlencode(values).encode()
-user_agent = r'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36' \
-             r' (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36'
-headers = {'User-Agent':user_agent, 'Connection':'keep-alive'}
-#将cookie保存在本地，并命名为cookie.txt
-cookie_filename = 'cookie.txt'
-cookie_aff = http.cookiejar.MozillaCookieJar(cookie_filename)
-handler = urllib.request.HTTPCookieProcessor(cookie_aff)
-opener = urllib.request.build_opener(handler)
+# 创建一个cookie对象
+filename = "cookie.txt"
+cookie = cookiejar.LWPCookieJar(filename)
+# 提取cookie
+hander_cookie = urllib.request.HTTPCookieProcessor(cookie)
+# 创建一个打开启
+opener = urllib.request.build_opener(hander_cookie)
+# 安装opener,可全局使用
+urllib.request.install_opener(opener)
+header = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
+loginUrl = "http://www.renren.com/PLogin.do"
+data = {
+    "email": "18588403840",
+    "password": "Changeme_123"
+}
+data = urllib.parse.urlencode(data).encode('utf-8')
+req = urllib.request.Request(url=loginUrl, headers=header, data=data)
+response = urllib.request.urlopen(req)
+cookie.save(ignore_discard=True, ignore_expires=True)  # 保存cookie可重复使用
+print(response.read())
 
-request = urllib.request.Request(LOGIN_URL, postdata, headers)
-try:
-    response = opener.open(request)
-except urllib.error.URLError as e:
-    print(e.reason)
+indexurl = "http://zhibo.renren.com/top"
 
-cookie_aff.save(ignore_discard=True, ignore_expires=True)
-
-for item in cookie_aff:
-    print('Name ='+ item.name)
-    print('Value ='+ item.value)
-#使用cookie登陆get_url
-get_request = urllib.request.Request(get_url,headers=headers)
-get_response = opener.open(get_request)
-print(get_response.read().decode())
+print("==================")
+print(urllib.request.urlopen(indexurl).read().decode())
 ```
 
 反复使用cookie
 
 ```py
-import urllib.request, urllib.parse
-import http.cookiejar
+#!C:\Python36\python.exe
+# -*- coding:utf-8 -*-
+'''
+@Time    : 2018/5/4 16:11
+@Author  : Fate
+@File    : urllibCookie.py
+'''
+# coding=utf-8
+import urllib
+from urllib import request, parse
+from http import cookiejar
 
-get_url = 'https://******.kiwisns.com/admin/affiliate/pending'
-cookie_filename = 'cookie.txt'
-cookie_aff = http.cookiejar.MozillaCookieJar(cookie_filename)
-cookie_aff.load(cookie_filename,ignore_discard=True,ignore_expires=True)
+# 创建一个cookie对象
+filename = "cookie.txt"
+cookie = cookiejar.LWPCookieJar()
+cookie.load(filename, ignore_expires=True, ignore_discard=True)  # 加载cookie
+# 提取cookie
+hander_cookie = urllib.request.HTTPCookieProcessor(cookie)
+# 创建一个打开启
+opener = urllib.request.build_opener(hander_cookie)
+# 安装opener,可全局使用
+urllib.request.install_opener(opener)
+header = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
 
-handler = urllib.request.HTTPCookieProcessor(cookie_aff)
-opener = urllib.request.build_opener(handler)
-#使用cookie登陆get_url
-get_request = urllib.request.Request(get_url)
-get_response = opener.open(get_request)
-print(get_response.read().decode())
+indexurl = "http://zhibo.renren.com/top"
+
+print("==================")
+print(urllib.request.urlopen(indexurl).read().decode())
+
 ```
 
 

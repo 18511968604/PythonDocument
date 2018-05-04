@@ -48,7 +48,6 @@ print "================================================"
 
 responseNew = urllib2.urlopen(url=url2)
 print responseNew.read()
-
 ```
 
 
