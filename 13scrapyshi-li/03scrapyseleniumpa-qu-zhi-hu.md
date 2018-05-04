@@ -36,7 +36,6 @@ class MyzhihuSpider(scrapy.Spider):
 
     def after_login(self, response):
         print(response.body)
-
 ```
 
 知乎有反爬虫
