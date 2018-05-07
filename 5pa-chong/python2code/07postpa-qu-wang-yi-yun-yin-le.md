@@ -44,7 +44,6 @@ if __name__ == '__main__':
     print hot_comments_list
     for i in hot_comments_list:
         print i
-
 ```
 
 
