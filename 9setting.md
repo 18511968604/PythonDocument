@@ -6,13 +6,13 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
 
 ## 内置设置参考手册 {#内置设置参考手册}
 
-* `BOT_NAME`
+* **`BOT_NAME`**
 
   * 默认: 'scrapybot'
 
   * 当您使用 startproject 命令创建项目时其也被自动赋值。
 
-* `CONCURRENT_ITEMS`
+* **`CONCURRENT_ITEMS`**
 
   * 默认: 100
 
@@ -23,6 +23,10 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
   * 默认: 16
 
   * Scrapy downloader 并发请求\(concurrent requests\)的最大值。
+* **`REACTOR_THREADPOOL_MAXSIZE = 20`**
+
+  * ##### 增加线程池数量 {#defaultrequestheaders}
+
 * ##### `DEFAULT_REQUEST_HEADERS` {#defaultrequestheaders}
 
   * 默认: 如下
@@ -35,7 +39,7 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
     ```
 
     Scrapy HTTP Request使用的默认header。
-* `DEPTH_LIMIT`
+* **`DEPTH_LIMIT`**
 
   * 默认: 0
 
@@ -51,7 +55,7 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
 
   * 默认情况下，Scrapy在两个请求间不等待一个固定的值， 而是使用0.5到1.5之间的一个随机值 \* DOWNLOAD\_DELAY 的结果作为等待间隔。
 
-* `DOWNLOAD_TIMEOUT`
+* **`DOWNLOAD_TIMEOUT`**
 
   * 默认: 180
 
@@ -69,21 +73,21 @@ Scrapy设置\(settings\)提供了定制Scrapy组件的方法。可以控制包�
     'mySpider.pipelines.ItcastJsonPipeline': 800,
     }
     ```
-* `LOG_FILE = "logname.txt"`
+* **`LOG_FILE = "logname.txt"`**
 
-* `LOG_ENABLED`
+* **`LOG_ENABLED`**
 
   * 默认: True
 
   * 是否启用logging。
 
-* `LOG_ENCODING`
+* **`LOG_ENCODING`**
 
   * 默认: 'utf-8'
 
   * logging使用的编码。
 
-* `LOG_LEVEL`
+* **`LOG_LEVEL`**
 
   * 默认: 'DEBUG'
 
@@ -140,8 +144,8 @@ class MyImagesPipeline(ImagesPipeline):
             raise DropItem("Item contains no images")
         item['image_paths'] = image_paths
         return item
-        
-        
+
+
 class MzituScrapyPipeline(ImagesPipeline):
 
     def file_path(self, request, response=None, info=None):
