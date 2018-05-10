@@ -136,6 +136,7 @@
     * [03爬取曾孙类](13scrapyshi-li/04pa-qu-xin-lang/03pa-qu-ceng-sun-lei.md)
     * [04爬取新闻信息](13scrapyshi-li/04pa-qu-xin-lang/04pa-qu-xin-wen-xin-xi.md)
     * [05创建三级文件夹](13scrapyshi-li/04pa-qu-xin-lang/05chuang-jian-san-ji-wen-jian-jia.md)
+    * [06迁移到scrapy](13scrapyshi-li/04pa-qu-xin-lang/06qian-yi-dao-scrapy.md)
 * [14scrapy-redis](14scrapy-redis.md)
   * [1源码分析](14scrapy-redis/1yuan-ma-fen-xi.md)
     * [connection](14scrapy-redis/1yuan-ma-fen-xi/connection.md)
