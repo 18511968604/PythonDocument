@@ -62,7 +62,7 @@
 
 1. #### 分布式爬虫：scrapy-redis
 2. #### JAVA爬虫：Crawler4j、WebMagic、WebCollector
-3. #### 非JAVA爬虫：scrapy（基于Python语言开发）
+3. #### 非JAVA爬虫：scrapy
 
 ### 6.关心问题
 
