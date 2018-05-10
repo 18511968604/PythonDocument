@@ -60,7 +60,7 @@
 
 开发网络爬虫应该选择Nutch、Crawler4j、WebMagic、scrapy、WebCollector还是其他的？上面说的爬虫，基本可以分3类：
 
-1. #### 分布式爬虫：Nutch
+1. #### 分布式爬虫：scrapy-redis
 2. #### JAVA爬虫：Crawler4j、WebMagic、WebCollector
 3. #### 非JAVA爬虫：scrapy（基于Python语言开发）
 
