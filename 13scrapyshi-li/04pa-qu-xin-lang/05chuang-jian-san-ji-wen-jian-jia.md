@@ -38,12 +38,9 @@ for title in parent:
         print("----", secondTitle)
 
         # 创建二级标题
-        if len(secondTitle) == 0:
-            pass
-        else:
-            secondDir = bigdir + "//" +secondTitle[0]
-            if not os.path.exists(secondDir):
-                os.mkdir(secondDir)
+        secondDir = bigdir + "//" +secondTitle[0]
+        if not os.path.exists(secondDir):
+            os.mkdir(secondDir)
 
         # 三级标题
         url = secondTitleUrl[0]
