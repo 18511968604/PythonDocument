@@ -70,6 +70,7 @@
     * [11登陆dedecms](5pa-chong/python2code/14deng-lu-dedecms.md)
     * [12使用代理](5pa-chong/python2code/08shi-yong-dai-li.md)
     * [13HTTP响应状态码](5pa-chong/python2code/13httpxiang-ying-zhuang-tai-ma.md)
+    * [14Requests模块](5pa-chong/python2code/14requestsmo-kuai.md)
   * [python3Code](5pa-chong/python3code.md)
     * [01登陆dedecms](5pa-chong/python3code/deng-lu-dedecms.md)
     * [02爬取豆瓣电影排行](5pa-chong/python3code/02pa-qu-dou-ban-dian-ying-pai-xing.md)
