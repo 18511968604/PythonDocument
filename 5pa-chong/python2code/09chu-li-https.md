@@ -1,23 +1,21 @@
 ```py
-#!C:\Python36\python.exe
-# -*- coding:utf-8 -*-
+import urllib
 import urllib2
+# 1. 导入Python SSL处理模块
 import ssl
 
+# 2. 表示忽略未经核实的SSL证书认证
+context = ssl._create_unverified_context()
 
-def download(url):
-    return urllib2.urlopen(url).read()
+url = "https://www.12306.cn/mormhweb/"
 
+headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"}
 
-url = "https://www.baidu.com"
-print download(url)
+request = urllib2.Request(url, headers = headers)
 
-context = ssl._create_unverified_context()  # 忽略安全
-header = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"}
-request = urllib2.Request(url, headers=header)  # 发送请求，伪装浏览器访问
-request.add_header("Connection", "keep-alive")  # 一直活着
-response = urllib2.urlopen(request, context=context)
+# 3. 在urlopen()方法里 指明添加 context 参数
+response = urllib2.urlopen(request, context = context)
+
 print response.read()
 ```
 

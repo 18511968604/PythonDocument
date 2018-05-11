@@ -18,7 +18,6 @@ if __name__ == '__main__':
     # print urllib.unquote(kw)  # 解码
     newurl = url + "?" + kw
     print getInfo(newurl)
-
 ```
 
 

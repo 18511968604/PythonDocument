@@ -65,7 +65,7 @@
     * [06ajax爬取豆瓣](5pa-chong/python2code/06ajaxpa-qu-dou-ban.md)
     * [07post爬取网易云音乐](5pa-chong/python2code/07postpa-qu-wang-yi-yun-yin-le.md)
     * [08使用代理](5pa-chong/python2code/08shi-yong-dai-li.md)
-    * [09处理https](5pa-chong/python2code/09chu-li-https.md)
+    * [09处理SSL证书验证](5pa-chong/python2code/09chu-li-https.md)
     * [10readCookie](5pa-chong/python2code/10readcookie.md)
     * [11saveCookie](5pa-chong/python2code/11savecookie.md)
     * [12loadCookie](5pa-chong/python2code/12loadcookie.md)
