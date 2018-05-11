@@ -1,5 +1,14 @@
+## ProxyHandler处理器（代理设置） {#proxyhandler处理器（代理设置）}
+
+使用代理IP，这是爬虫/反爬虫的第二大招，通常也是最好用的。
+
+很多网站会检测某一段时间某个IP的访问次数\(通过流量统计，系统日志等\)，如果访问次数多的不像正常人，它会禁止这个IP的访问。
+
+所以我们可以设置一些代理服务器，每隔一段时间换一个代理，就算IP被禁止，依然可以换个IP继续爬取。
+
+urllib2中通过ProxyHandler来设置使用代理服务器，下面代码说明如何使用自定义opener来使用代理：
+
 ```py
-#!C:\Python36\python.exe
 # -*- coding:utf-8 -*-
 import urllib2
 
@@ -50,7 +59,6 @@ for i in range(10):
         print('失败')
     else:
         print('成功')
-
 ```
 
 
