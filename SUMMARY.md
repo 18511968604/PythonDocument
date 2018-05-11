@@ -69,6 +69,7 @@
     * [10模拟登陆人人网](5pa-chong/python2code/13mo-ni-deng-lu-ren-ren-wang.md)
     * [11登陆dedecms](5pa-chong/python2code/14deng-lu-dedecms.md)
     * [12使用代理](5pa-chong/python2code/08shi-yong-dai-li.md)
+    * [13HTTP响应状态码](5pa-chong/python2code/13httpxiang-ying-zhuang-tai-ma.md)
   * [python3Code](5pa-chong/python3code.md)
     * [01登陆dedecms](5pa-chong/python3code/deng-lu-dedecms.md)
     * [02爬取豆瓣电影排行](5pa-chong/python3code/02pa-qu-dou-ban-dian-ying-pai-xing.md)
