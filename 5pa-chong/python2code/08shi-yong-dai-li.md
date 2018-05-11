@@ -32,7 +32,7 @@ def usePasswd
     print response.read()
 ```
 
-```
+```py
 import random
 
 import requests
