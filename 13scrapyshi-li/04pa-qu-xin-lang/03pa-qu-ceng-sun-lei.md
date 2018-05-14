@@ -35,7 +35,6 @@ def get_page(url):
 
 
 get_page(url)
-
 ```
 
 
