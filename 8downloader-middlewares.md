@@ -32,7 +32,6 @@
     CRAWLERA_ENABLED = True
     CRAWLERA_USER = '注册/购买的UserKey'
     CRAWLERA_PASS = '注册/购买的Password'
-
   ```
 
 ## 设置下载中间件（Downloader Middlewares） {#设置下载中间件（downloader-middlewares）}
@@ -51,14 +50,12 @@
 DOWNLOADER_MIDDLEWARES = {
     'mySpider.middlewares.MyDownloaderMiddleware': 543,
 }
-
 ```
 
 编写下载器中间件十分简单。每个中间件组件是一个定义了以下一个或多个方法的Python类:
 
 ```
 class scrapy.contrib.downloadermiddleware.DownloaderMiddleware
-
 ```
 
 ### process\_request\(self, request, spider\) {#processrequestself-request-spider}
@@ -141,7 +138,6 @@ class RandomProxy(object):
             # 对应到代理服务器的信令格式里
             request.headers['Proxy-Authorization'] = 'Basic ' + base64_userpasswd
             request.meta['proxy'] = "http://" + proxy['ip_port']
-
 ```
 
 > 为什么HTTP代理要使用base64编码：
@@ -153,14 +149,12 @@ CONNECT 59.64.128.198:21 HTTP/1.1
 Host: 59.64.128.198:21
 Proxy-Authorization: Basic bGV2I1TU5OTIz
 User-Agent: OpenFetion
-
 ```
 
 > 其中`Proxy-Authorization`是身份验证信息，Basic后面的字符串是用户名和密码组合后进行base64编码的结果，也就是对username:password进行base64编码。
 
 ```
 HTTP/1.0 200 Connection established
-
 ```
 
 > OK，客户端收到收面的信令后表示成功建立连接，接下来要发送给远程主机的数据就可以发送给代理服务器了，代理服务器建立连接后会在根据IP地址和端口号对应的连接放入缓存，收到信令后再根据IP地址和端口号从缓存中找到对应的连接，将数据通过该连接转发出去。
@@ -199,20 +193,17 @@ PROXIES = [
 
 ```
 COOKIES_ENABLED = False
-
 ```
 
 * 设置下载延迟
 
 ```
 DOWNLOAD_DELAY = 3
-
 ```
 
 * 最后设置setting.py里的DOWNLOADER\_MIDDLEWARES，添加自己编写的下载中间件类。
 
 ```py
-
 DOWNLOADER_MIDDLEWARES = {
     #'mySpider.middlewares.MyCustomDownloaderMiddleware': 543,
     'mySpider.middlewares.RandomUserAgent': 1,
