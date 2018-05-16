@@ -95,8 +95,8 @@ class MybiqugeSpider(scrapy.Spider):
             item["level1"] = level1
             item['level1Url'] = url
             itemList.append(item)
-            for item in itemList:
-                yield scrapy.Request(url=item['level1Url'], meta={"meta1": item}, callback=self.get_level2)
+        for item in itemList:
+            yield scrapy.Request(url=item['level1Url'], meta={"meta1": item}, callback=self.get_level2)
 
     def get_level2(self, response):
 
@@ -112,8 +112,8 @@ class MybiqugeSpider(scrapy.Spider):
             item['level2'] = i.xpath("./span/a/text()").extract()[0]
             item['level2Url'] = url
             itemList.append(item)
-            for item in itemList:
-                yield scrapy.Request(url=item['level2Url'], meta={"meta2": item}, callback=self.get_chapter)
+        for item in itemList:
+            yield scrapy.Request(url=item['level2Url'], meta={"meta2": item}, callback=self.get_chapter)
 
     def get_chapter(self, response):
         item = response.meta['meta2']
