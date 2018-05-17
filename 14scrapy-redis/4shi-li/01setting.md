@@ -19,6 +19,14 @@ SCHEDULER_PERSIST = True
 # 只在使用SpiderQueue或者SpiderStack是有效的参数，指定爬虫关闭的最大间隔时间
 # SCHEDULER_IDLE_BEFORE_CLOSE = 10
 
+# 去重规则，在redis中保存时对应的key
+# SCHEDULER_DUPEFILTER_KEY = '%(spider)s:dupefilter'  
+# 去重规则对应处理的类  
+# SCHEDULER_DUPEFILTER_CLASS = 'scrapy_redis.dupefilter.RFPDupeFilter'  
+#默认情况下,RFPDupeFilter只记录第一个重复请求。将DUPEFILTER_DEBUG设置为True会记录所有重复的请求。
+DUPEFILTER_DEBUG =True
+            
+
 # 通过配置RedisPipeline将item写入key为 spider.name : items 的redis的list中，供后面的分布式处理item
 # 这个已经由 scrapy-redis 实现，不需要我们写代码
 ITEM_PIPELINES = {
@@ -34,9 +42,6 @@ REDIS_PORT = 6379
 
 # LOG等级
 LOG_LEVEL = 'DEBUG'
-
-#默认情况下,RFPDupeFilter只记录第一个重复请求。将DUPEFILTER_DEBUG设置为True会记录所有重复的请求。
-DUPEFILTER_DEBUG =True
 
 # 覆盖默认请求头，可以自己编写Downloader Middlewares设置代理和UserAgent
 DEFAULT_REQUEST_HEADERS = {
