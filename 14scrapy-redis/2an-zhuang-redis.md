@@ -98,7 +98,7 @@ appendonly no
 
 1. Master端按指定配置文件启动`redis-server`，示例：
 
-   * 非Windows系统：`sudo redis-server /etc/redis/redis/conf`
+   * 非Windows系统：`sudo redis-server /etc/redis/redis.conf`
 
    * Windows系统：`命令提示符(管理员)`模式下执行`redis-server C:\Intel\Redis\conf\redis.conf`读取默认配置即可。
 
