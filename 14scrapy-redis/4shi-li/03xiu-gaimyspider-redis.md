@@ -56,5 +56,15 @@ class TencentSpider(RedisSpider):
         yield item
 ```
 
+## 2、在Master端的redis-cli输⼊push指令，参考格式
+
+```
+$redis> lpush baike:start_urls https://baike.baidu.com/item/Python/407313
+
+$redis> lrange baike:start_urls 0 -1
+
+$redis> keys *
+```
+
 
 

@@ -90,7 +90,6 @@ class MybaikeSpider(CrawlSpider):
         item["secondTitle"] = result[1]
         item["content"] = result[2]
         yield item
-
 ```
 
 
