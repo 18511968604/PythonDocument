@@ -1,2 +1,2 @@
-![](/assets/resbiquge.png)
+
 
