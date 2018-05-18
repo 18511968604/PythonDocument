@@ -46,5 +46,52 @@ if __name__ == '__main__':
         print i
 ```
 
+## **urllib2默认只支持HTTP/HTTPS的`GET`和`POST`方法** {#urllib2默认只支持httphttps的get和post方法}
+
+### urllib.urlencode\(\) {#urlliburlencode}
+
+##### urllib 和 urllib2 都是接受URL请求的相关模块，但是提供了不同的功能。两个最显著的不同如下： {#urllib-和-urllib2-都是接受url请求的相关模块，但是提供了不同的功能。两个最显著的不同如下：}
+
+> * urllib 仅可以接受URL，不能创建 设置了headers 的Request 类实例；
+>
+> * 但是 urllib 提供`urlencode`方法用来GET查询字符串的产生，而 urllib2 则没有。（这是 urllib 和 urllib2 经常一起使用的主要原因）
+>
+> * 编码工作使用urllib的`urlencode()`函数，帮我们将`key:value`这样的键值对转换成`"key=value"`这样的字符串，解码工作可以使用urllib的`unquote()`函数。（注意，不是urllib2.urlencode\(\) \)
+
+### 有道词典翻译网站： {#有道词典翻译网站：}
+
+输入测试数据，再通过使用Fiddler观察，其中有一条是POST请求，而向服务器发送的请求数据并不是在url里，那么我们可以试着模拟这个POST请求。
+
+![](/assets/youdaopost.png)
+
+于是，我们可以尝试用POST方式发送请求。
+
+```py
+import urllib
+import urllib2
+
+# POST请求的目标URL
+url = "http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=null"
+
+headers={"User-Agent": "Mozilla...."}
+
+formdata = {
+    "type":"AUTO",
+    "i":"i love python",
+    "doctype":"json",
+    "xmlVersion":"1.8",
+    "keyfrom":"fanyi.web",
+    "ue":"UTF-8",
+    "action":"FY_BY_ENTER",
+    "typoResult":"true"
+}
+
+data = urllib.urlencode(formdata)
+
+request = urllib2.Request(url, data = data, headers = headers)
+response = urllib2.urlopen(request)
+print response.read()
+```
+
 
 

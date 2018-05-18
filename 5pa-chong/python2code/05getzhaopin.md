@@ -25,7 +25,6 @@ if __name__ == '__main__':
     addr = "深圳"
     job = "python"
     print download2(addr, job)
-
 ```
 
 
