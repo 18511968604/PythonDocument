@@ -1,3 +1,19 @@
+
+
+## **urllib2默认只支持HTTP/HTTPS的**`GET`**和**`POST`**方法** {#urllib2默认只支持httphttps的get和post方法}
+
+### urllib.urlencode\(\) {#urlliburlencode}
+
+##### urllib 和 urllib2 都是接受URL请求的相关模块，但是提供了不同的功能。两个最显著的不同如下： {#urllib-和-urllib2-都是接受url请求的相关模块，但是提供了不同的功能。两个最显著的不同如下：}
+
+> * urllib 仅可以接受URL，不能创建 设置了headers 的Request 类实例；
+>
+> * 但是 urllib 提供`urlencode`方法用来GET查询字符串的产生，而 urllib2 则没有。（这是 urllib 和 urllib2 经常一起使用的主要原因）
+>
+> * 编码工作使用urllib的`urlencode()`函数，帮我们将`key:value`这样的键值对转换成`"key=value"`这样的字符串，解码工作可以使用urllib的`unquote()`函数。（注意，不是urllib2.urlencode\(\) \)
+
+### POST爬取网易云音乐评论
+
 ```py
 #!C:\Python36\python.exe
 # -*- coding:utf-8 -*-
@@ -45,18 +61,6 @@ if __name__ == '__main__':
     for i in hot_comments_list:
         print i
 ```
-
-## **urllib2默认只支持HTTP/HTTPS的`GET`和`POST`方法** {#urllib2默认只支持httphttps的get和post方法}
-
-### urllib.urlencode\(\) {#urlliburlencode}
-
-##### urllib 和 urllib2 都是接受URL请求的相关模块，但是提供了不同的功能。两个最显著的不同如下： {#urllib-和-urllib2-都是接受url请求的相关模块，但是提供了不同的功能。两个最显著的不同如下：}
-
-> * urllib 仅可以接受URL，不能创建 设置了headers 的Request 类实例；
->
-> * 但是 urllib 提供`urlencode`方法用来GET查询字符串的产生，而 urllib2 则没有。（这是 urllib 和 urllib2 经常一起使用的主要原因）
->
-> * 编码工作使用urllib的`urlencode()`函数，帮我们将`key:value`这样的键值对转换成`"key=value"`这样的字符串，解码工作可以使用urllib的`unquote()`函数。（注意，不是urllib2.urlencode\(\) \)
 
 ### 有道词典翻译网站： {#有道词典翻译网站：}
 
