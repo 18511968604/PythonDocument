@@ -43,7 +43,7 @@ class BiqugePipeline(object):
         return item
 ```
 
-3.spider
+## 3.spider
 
 ```py
 # -*- coding: utf-8 -*-
@@ -143,7 +143,6 @@ class MybiqugeSpider(scrapy.Spider):
         print(content)
         item['content'] = content
         yield item
-
 ```
 
 
