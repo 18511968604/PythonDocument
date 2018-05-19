@@ -1,4 +1,4 @@
-## 1.items.py
+## 1、items
 
 ```py
 import scrapy
@@ -16,7 +16,7 @@ class BiqugeItem(scrapy.Item):
     content = scrapy.Field()
 ```
 
-## 2.pipelines.py
+## 2、pipelines
 
 ```py
 import os
@@ -43,7 +43,7 @@ class BiqugePipeline(object):
         return item
 ```
 
-## 3.spider
+## 3、spider
 
 ```py
 # -*- coding: utf-8 -*-
