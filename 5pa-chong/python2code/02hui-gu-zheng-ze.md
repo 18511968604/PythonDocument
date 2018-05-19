@@ -14,7 +14,6 @@ regex = re.compile(myre, re.I)
 mylist = regex.findall(mystr)
 
 print mylist[0]
-
 ```
 
 

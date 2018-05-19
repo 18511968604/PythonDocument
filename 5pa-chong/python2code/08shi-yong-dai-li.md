@@ -1,3 +1,33 @@
+# HTTP代理神器Fiddler {#http代理神器fiddler}
+
+Fiddler是一款强大Web调试工具，它能记录所有客户端和服务器的HTTP请求。 Fiddler启动的时候，默认IE的代理设为了127.0.0.1:8888，而其他浏览器是需要手动设置。
+
+#### 请求 \(Request\) 部分详解 {#请求-request-部分详解}
+
+> 1. Headers —— 显示客户端发送到服务器的 HTTP 请求的 header，显示为一个分级视图，包含了 Web 客户端信息、Cookie、传输状态等。
+> 2. Textview —— 显示 POST 请求的 body 部分为文本。
+> 3. WebForms —— 显示请求的 GET 参数 和 POST body 内容。
+> 4. HexView —— 用十六进制数据显示请求。
+> 5. Auth —— 显示响应 header 中的 Proxy-Authorization\(代理身份验证\) 和 Authorization\(授权\) 信息.
+> 6. Raw —— 将整个请求显示为纯文本。
+> 7. JSON - 显示JSON格式文件。
+> 8. XML —— 如果请求的 body 是 XML 格式，就是用分级的 XML 树来显示它。
+
+#### 响应 \(Response\) 部分详解 {#响应-response-部分详解}
+
+> 1. Transformer —— 显示响应的编码信息。
+> 2. Headers —— 用分级视图显示响应的 header。
+> 3. TextView —— 使用文本显示相应的 body。
+> 4. ImageVies —— 如果请求是图片资源，显示响应的图片。
+> 5. HexView —— 用十六进制数据显示响应。
+> 6. WebView —— 响应在 Web 浏览器中的预览效果。
+> 7. Auth —— 显示响应 header 中的 Proxy-Authorization\(代理身份验证\) 和 Authorization\(授权\) 信息。
+> 8. Caching —— 显示此请求的缓存信息。
+> 9. Privacy —— 显示此请求的私密 \(P3P\) 信息。
+> 10. Raw —— 将整个响应显示为纯文本。
+> 11. JSON - 显示JSON格式文件。
+> 12. XML —— 如果响应的 body 是 XML 格式，就是用分级的 XML 树来显示它 。
+
 ## ProxyHandler处理器（代理设置） {#proxyhandler处理器（代理设置）}
 
 使用代理IP，这是爬虫/反爬虫的第二大招，通常也是最好用的。

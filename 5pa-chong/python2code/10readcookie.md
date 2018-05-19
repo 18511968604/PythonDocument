@@ -4,15 +4,9 @@
 
 * 但是基本的urlopen\(\)方法不支持代理、cookie等其他的HTTP/HTTPS高级功能。所以要支持这些功能：
 
-  1. 使用相关的
-     `Handler处理器`
-     来创建特定功能的处理器对象；
-  2. 然后通过
-     `urllib2.build_opener()`
-     方法使用这些处理器对象，创建自定义opener对象；
-  3. 使用自定义的opener对象，调用
-     `open()`
-     方法发送请求。
+  1. 使用相关的`Handler处理器`来创建特定功能的处理器对象；
+  2. 然后通过`urllib2.build_opener()`方法使用这些处理器对象，创建自定义opener对象；
+  3. 使用自定义的opener对象，调用`open()`方法发送请求。
 
 * 如果程序里所有的请求都使用自定义的opener，可以使用`urllib2.install_opener()`将自定义的 opener 对象 定义为 全局opener，表示如果之后凡是调用urlopen，都将使用这个opener（根据自己的需求来选择）
 
