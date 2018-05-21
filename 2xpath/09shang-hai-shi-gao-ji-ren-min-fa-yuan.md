@@ -26,8 +26,6 @@ header = {
 
 page = requests.post(url=url, headers=header, data=data)
 print(page.content.decode("gbk"))
-
-
 ```
 
 
