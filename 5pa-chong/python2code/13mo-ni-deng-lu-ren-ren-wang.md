@@ -28,6 +28,7 @@ print response_index.read()
 ## 2、使用登录后的cookie访问
 
 ```
+使用sublime替换
 ^(.*):\s(.*)$
 "\1":"\2",
 ```
