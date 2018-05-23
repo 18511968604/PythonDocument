@@ -25,5 +25,12 @@ response_index = opener.open("http://www.renren.com/4354719823/profile")
 print response_index.read()
 ```
 
+## 2、使用登录后的cookie访问
+
+```
+^(.*):\s(.*)$
+"\1":"\2",
+```
+
 
 
