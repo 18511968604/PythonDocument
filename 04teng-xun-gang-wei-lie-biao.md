@@ -19,7 +19,6 @@ def download(url):
 
 
 download("http://hr.tencent.com/position.php?keywords=python&lid=0&tid=0&start=100#a")
-
 ```
 
 
