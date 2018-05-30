@@ -28,7 +28,6 @@ print(html.xpath("//*[@text=\"3\"]/@class"))  # 选着text=3的元素
 print(html.xpath("//*[@class=\"nimei\"]"))  # 选着text=3的元素
 print(html.xpath("//li/a/text()"))  # 取出<>
 print(html.xpath("//li[3]/a/span/text()"))  # 取出内部<>数据
-
 ```
 
 

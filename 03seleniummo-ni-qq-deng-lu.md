@@ -17,8 +17,8 @@ def openURL():
 
     username = driver.find_element_by_id('u')
     password = driver.find_element_by_id('p')
-    username.send_keys('1687458949')
-    password.send_keys('qwersa123456')
+    username.send_keys('*****')
+    password.send_keys('*****')
     time.sleep(3)
     driver.find_element_by_id('login_button').click()
     print("OK")

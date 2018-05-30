@@ -25,7 +25,6 @@ html = lxml.etree.parse("index.html")  # parse处理文件
 print(type(html))
 print(html)
 print(lxml.etree.tostring(html))
-
 ```
 
 

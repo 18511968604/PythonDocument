@@ -39,7 +39,6 @@ print(mytree.xpath("//*[@id=\"useless\"]/li/text()"))
 print(mytree.xpath("//*[@id=\"url\"]/a/@href"))
 print(mytree.xpath("//*[@id=\"url\"]/a/@title"))
 print(mytree.xpath("//*[@id=\"url\"]/a/text()"))
-
 ```
 
 
