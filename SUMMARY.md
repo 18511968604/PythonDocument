@@ -81,6 +81,7 @@
   * [02股票基金](02gu-piao-ji-jin.md)
   * [03腾讯岗位说明](03teng-xun-gang-wei.md)
   * [04腾讯岗位列表](04teng-xun-gang-wei-lie-biao.md)
+  * [05课外分享图灵机器人](05ke-wai-fen-xiang-tu-ling-ji-qi-ren.md)
 * [7xpath](2xpath.md)
   * [01lxml](2xpath/01lxml.md)
   * [02xpath](2xpath/2xpath.md)
