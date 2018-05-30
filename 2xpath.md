@@ -39,12 +39,12 @@ Ctrl + Shift + X打开或关闭插件
 
 <bookstore>
 
-<book>
-  <title lang="en">Harry Potter</title>
-  <author>J K. Rowling</author> 
-  <year>2005</year>
-  <price>29.99</price>
-</book>
+  <book>
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author> 
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
 
 </bookstore>
 ```
