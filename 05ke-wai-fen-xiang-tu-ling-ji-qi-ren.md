@@ -15,7 +15,6 @@ while 1:
     resp.encoding = 'utf-8'
     resp = resp.json()
     print(resp['content'])
-
 ```
 
 ## 2、微信自动聊天
@@ -58,7 +57,6 @@ def tuling_reply(msg):
 
 itchat.auto_login(hotReload=True)
 itchat.run()
-
 ```
 
 
