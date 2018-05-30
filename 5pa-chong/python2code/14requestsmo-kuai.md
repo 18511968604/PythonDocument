@@ -22,7 +22,6 @@ Requests的文档非常完备，中文文档也相当不错。Requests能完全�
 $ pip install requests
 
 $ easy_install requests
-
 ```
 
 ## 基本GET请求（headers参数 和 parmas参数） {#基本get请求（headers参数-和-parmas参数）}
@@ -78,7 +77,6 @@ print response.status_code
 'utf-8'
 
 200
-
 ```
 
 > * 使用response.text 时，Requests 会基于 HTTP 响应的文本编码自动解码响应内容，大多数 Unicode 字符集都能被无缝地解码。
@@ -129,7 +127,6 @@ print response.json()
 {"type":"EN2ZH_CN","errorCode":0,"elapsedTime":2,"translateResult":[[{"src":"i love python","tgt":"我喜欢python"}]],"smartResult":{"type":1,"entries":["","肆文","高德纳"]}}
 
 {u'errorCode': 0, u'elapsedTime': 0, u'translateResult': [[{u'src': u'i love python', u'tgt': u'\u6211\u559c\u6b22python'}]], u'smartResult': {u'type': 1, u'entries': [u'', u'\u8086\u6587', u'\u9ad8\u5fb7\u7eb3']}, u'type': u'EN2ZH_CN'}
-
 ```
 
 ## 代理（proxies参数） {#代理（proxies参数）}
@@ -144,7 +141,10 @@ proxies = {
   "http": "http://12.34.56.79:9527",
   "https": "http://12.34.56.79:9527",
 }
-
+# 带密码代理
+proxies = {
+    "http": "http://user:pass@10.10.1.10:3128/",
+}
 response = requests.get("http://www.baidu.com", proxies = proxies)
 print response.text
 ```
@@ -228,8 +228,6 @@ response = ssion.get("http://www.renren.com/410043129/profile")
 print response.text
 ```
 
-
-
 ## 处理HTTPS请求 SSL证书验证 {#处理https请求-ssl证书验证}
 
 Requests也可以为HTTPS请求验证SSL证书：
@@ -243,15 +241,12 @@ response = requests.get("https://www.baidu.com/", verify=True)
 # 也可以省略不写
 # response = requests.get("https://www.baidu.com/")
 print r.text
-
 ```
 
 运行结果：
 
 ```
-
 百度一下，你就知道 ....
-
 ```
 
 * 如果SSL证书验证不通过，或者不信任服务器的安全证书，则会报出SSLError，据说 12306 证书是自己做的：
