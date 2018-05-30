@@ -2,7 +2,7 @@
 
 * [爬虫](pa-chong.md)
 * [1线程和协程](1xian-cheng-he-xie-cheng.md)
-  * [01协程和协程](1xian-cheng-he-xie-cheng/01xie-cheng-he-xie-cheng.md)
+  * [01线程和协程](1xian-cheng-he-xie-cheng/01xie-cheng-he-xie-cheng.md)
     * [01什么是多线程](1xian-cheng-he-xie-cheng/01xie-cheng-he-xie-cheng/01shi-yao-shi-duo-xian-cheng.md)
     * [02创建一个线程](1xian-cheng-he-xie-cheng/01xie-cheng-he-xie-cheng/02chuang-jian-yi-ge-xian-cheng.md)
     * [03创建一个多线程](1xian-cheng-he-xie-cheng/01xie-cheng-he-xie-cheng/03chuang-jian-yi-ge-duo-xian-cheng.md)
@@ -34,7 +34,7 @@
     * [03共享列表和字典](2xie-cheng/02jin-cheng-tong-xin/03gong-xiang-lie-biao-he-zi-dian.md)
     * [04进程间共享队列](2xie-cheng/02jin-cheng-tong-xin/04jin-cheng-jian-gong-xiang-dui-lie.md)
     * [05两条进程通过管道共享数据](2xie-cheng/02jin-cheng-tong-xin/05liang-tiao-jin-cheng-tong-guo-guan-dao-gong-xiang-shu-ju.md)
-    * 06进程池
+    * [06进程池](2xie-cheng/02jin-cheng-tong-xin/06jin-cheng-chi.md)
     * [07获取进程池结果](2xie-cheng/02jin-cheng-tong-xin/07huo-qu-jin-cheng-chi-jie-guo.md)
 * [3认识爬虫](3ren-shi-pa-chong.md)
   * [01getUrls](3ren-shi-pa-chong/01geturls.md)
