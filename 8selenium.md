@@ -14,7 +14,7 @@
 
 链接：[https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w](https://pan.baidu.com/s/1RATs8y-9Vige0IxcKdn83w) 密码：l41g
 
-## WebDriver常用方法（http://selenium-python.readthedocs.io/index.html）
+## WebDriver常用方法（[http://selenium-python.readthedocs.io/index.html）](http://selenium-python.readthedocs.io/index.html）)
 
 * ### clear\(\)
 

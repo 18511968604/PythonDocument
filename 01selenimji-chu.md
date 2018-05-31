@@ -49,7 +49,7 @@ def getElement():
     # 向文本输入内容
     # element.send_keys("海贼王")
     # 利用 Keys 这个类来模拟点击某个按键
-    element.send_keys("海贼王", Keys.ARROW_DOWN)
+    element.send_keys("海贼王", Keys.RETURN)
     # 清除文本
     # element.clear()
 
