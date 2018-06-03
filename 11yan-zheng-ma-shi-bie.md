@@ -91,6 +91,8 @@ tesseract test.jpg result -l chi_sim
 
   normal 0 0 0 0 0 表示默认普通字体
 
+* echo font 0 0 0 0 0 &gt;font\_properties
+
 ```
 shapeclustering -F font_properties -U unicharset mjorcen.normal.exp0.tr
 
