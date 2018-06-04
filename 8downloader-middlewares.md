@@ -10,6 +10,8 @@
 
 * 动态设置User-Agent（随机切换User-Agent，模拟不同用户的浏览器信息）
 
+* 添加请求头的多种方式 http://30daydo.com/article/245
+
 * 禁用Cookies（也就是不启用cookies middleware，不向Server发送cookies，有些网站通过cookie的使用发现爬虫行为）
 
   * 可以通过
