@@ -12,7 +12,7 @@ Scrapy终端是一个交互终端，我们可以在未启动spider的情况下�
 scrapy shell "https://hr.tencent.com/position.php?&start=0#a"
 ```
 
-![](../images/scrapy_shell.png)
+
 
 Scrapy Shell根据下载的页面会自动创建一些方便使用的对象，例如 Response 对象，以及`Selector 对象 (对HTML及XML内容)`。
 

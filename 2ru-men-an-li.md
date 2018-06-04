@@ -17,7 +17,7 @@ scrapy startproject mySpider
 
 * 其中， mySpider 为项目名称，可以看到将会创建一个 mySpider 文件夹，目录结构大致如下：
 
-![](../images/7.2.png)![](/assets/myscrapy.png)
+![](/assets/myscrapy.png)
 
 下面来简单介绍一下各个主要文件的作用：
 
@@ -35,7 +35,7 @@ scrapy startproject mySpider
 
 ## 二、明确目标\(mySpider/items.py\) {#二、明确目标myspideritemspy}
 
-我们打算抓取：[http://bbs.tianya.cn/post-140-393977-1.shtml网站里的邮箱。](http://bbs.tianya.cn/post-140-393977-1.shtml网站里的邮箱。)
+我们打算抓取：[http://bbs.tianya.cn/post-140-393977-1.shtml](http://bbs.tianya.cn/post-140-393977-1.shtml) 网站里的邮箱。
 
 1. 打开mySpider目录下的items.py
 
