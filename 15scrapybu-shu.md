@@ -9,12 +9,12 @@ API 文档：[http://scrapyd.readthedocs.io/en/stable/api.html](http://scrapyd.r
 创建：virtualenv scrapySpider
 
 ```
-virtualenv -p /usr/bin/python2.7 venv　　　　# -p参数指定Python解释器程序路径
+virtualenv -p /usr/bin/python3.6 venv　　　　# -p参数指定Python解释器程序路径
 ```
 
 查找：which python
 
-激活：source venv/bin/activate　
+激活：source venv/bin/activate
 
 ```
 mkvirtualenv --python=/usr/local/python3.5.3/bin/python venv
@@ -136,8 +136,6 @@ scrapyd.list_jobs('project_name')
     }
 ```
 
-
-
 # 分布式爬虫管理框架Gerapy
 
 是不是方便多了？
@@ -173,7 +171,6 @@ pip3 install gerapy
 安装完成之后我们就可以使用 gerapy 命令了，输入 gerapy 便可以获取它的基本使用方法：
 
 ```
-
 gerapy
 Usage:
   gerapy init [--folder=<folder>]
@@ -248,8 +245,6 @@ gerapy migrate
 
 ![](/assets/scrapydConf.png)
 
-
-
 ## **项目管理**
 
 Gerapy 的核心功能当然是项目管理，在这里我们可以自由地配置、编辑、部署我们的 Scrapy 项目，点击左侧的 Projects ，即项目管理选项，我们可以看到如下空白的页面：
@@ -261,8 +256,6 @@ Gerapy 的核心功能当然是项目管理，在这里我们可以自由地配�
 这时刷新页面，我们便可以看到 Gerapy 检测到了这个项目，同时它是不可配置、没有打包的：
 
 ![](/assets/pageProject.png)
-
-
 
 这时我们可以点击部署按钮进行打包和部署，在右下角我们可以输入打包时的描述信息，类似于 Git 的 commit 信息，然后点击打包按钮，即可发现 Gerapy 会提示打包成功，同时在左侧显示打包的结果和打包名称：
 
@@ -308,11 +301,7 @@ Gerapy 可以做到：我们写好爬虫规则，它帮我们自动生成 Scrapy
 
 再比如爬取规则，我们可以指定从哪个链接开始爬取，允许爬取的域名是什么，该链接提取哪些跟进的链接，用什么解析方法来处理等等配置。通过这些配置，我们可以完成爬取规则的设置。
 
-
-
 最后点击生成按钮即可完成代码的生成。
-
-
 
 生成的代码示例结果其结构和 Scrapy 代码是完全一致的。
 
@@ -325,15 +314,4 @@ Gerapy 可以做到：我们写好爬虫规则，它帮我们自动生成 Scrapy
 以上便是 Gerapy 分布式爬虫管理框架的基本用法，如需了解更多，可以访问其
 
 GitHub：[https://github.com/Gerapy/Gerapy](https://github.com/Gerapy/Gerapy)。
-
-
-
-
-
-
-
-
-
-  
-
 
