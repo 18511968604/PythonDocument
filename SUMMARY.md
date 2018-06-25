@@ -158,4 +158,5 @@
     * [03修改myspider\_redis](14scrapy-redis/4shi-li/03xiu-gaimyspider-redis.md)
     * [04修改mycrawler\_redis](14scrapy-redis/4shi-li/04xiu-gai-mycrawler-redis.md)
     * [05处理redis数据库内容](14scrapy-redis/4shi-li/05chu-liredis-shu-ju-ku-nei-rong.md)
+* [15scrapy部署](15scrapybu-shu.md)
 
